@@ -219,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                   GestureDetector(
                     onTap: () {
                       Get.off(
-                        () => RegisterPage(),
+                        () => RegisterPage(title: '',),
                         transition: Transition.fadeIn,
                       );
                     },
