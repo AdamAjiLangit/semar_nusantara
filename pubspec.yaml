@@ -30,6 +30,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  google_fonts: ^6.1.0
+  http: ^1.1.0
+  get:
+  flutter_svg: ^0.22.0
+  image_picker: ^1.0.4
+  shared_preferences: ^2.2.2
+  page_transition: ^2.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -52,6 +59,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - Images/iconEmail.png
+    - Images/iconPassword.png
+    - Images/iconLogin.png
+    - Images/landingPage1.png
+    - Images/landingPage2.png
+    - Images/landingPage3.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
