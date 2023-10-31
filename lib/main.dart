@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:metal_marketplace/LoginPage.dart';
+import 'package:get/get.dart';
+import 'package:metal_marketplace/pages/LandingPage.dart';
+import 'package:metal_marketplace/pages/LoginPage.dart';
+import 'package:metal_marketplace/pages/Register.dart';
+import 'package:metal_marketplace/pages/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,16 +12,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      home: LoginPage(title: ""),
     );
   }
 }
