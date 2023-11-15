@@ -7,7 +7,6 @@ import 'package:metal_marketplace/pages/LoginPage.dart';
 import 'package:metal_marketplace/pages/HomePage.dart';
 
 class SplashController extends GetxController {
-
   late final SharedPreferences prefs;
 
   @override
@@ -19,7 +18,7 @@ class SplashController extends GetxController {
 
   void checkSharedPreference() async{
     prefs = await SharedPreferences.getInstance();
-    Future.delayed(Duration(seconds: 2), () async {
+    Future.delayed(Duration(seconds: 5), () async {
       if(prefs.getString('username') == null){
         Get.off(LandingPage());
       }else{

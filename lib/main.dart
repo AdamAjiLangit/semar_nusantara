@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metal_marketplace/pages/HomePage.dart';
 import 'package:metal_marketplace/pages/LandingPage.dart';
 import 'package:metal_marketplace/pages/LoginPage.dart';
 import 'package:metal_marketplace/pages/Register.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: LoginPage(title: ""),
+      home: SplashScreen(),
     );
   }
 }
