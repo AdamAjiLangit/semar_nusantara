@@ -4,6 +4,7 @@ import 'package:metal_marketplace/pages/HomePage.dart';
 import 'package:metal_marketplace/pages/LandingPage.dart';
 import 'package:metal_marketplace/pages/LoginPage.dart';
 import 'package:metal_marketplace/pages/SplashScreen.dart';
+import 'package:metal_marketplace/pages/register_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: RegisterPage(),
     );
   }
 }
