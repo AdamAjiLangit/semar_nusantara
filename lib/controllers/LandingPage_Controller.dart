@@ -2,10 +2,13 @@ import 'package:get/get.dart';
 import 'package:metal_marketplace/pages/HomePage.dart';
 import 'package:metal_marketplace/pages/LandingPage.dart';
 import 'package:metal_marketplace/pages/LandingPage2.dart';
+import 'package:metal_marketplace/pages/LoginPage.dart';
+import 'package:page_transition/page_transition.dart';
 
 class onPressedController1 extends GetxController{
   void goToNextPage() {
-    Get.to(NextlandingPage());
+    Get.to(NextlandingPage(),
+    );
   }
 }
 
@@ -17,6 +20,6 @@ class onPressedBackController extends GetxController{
 
 class onPressedToController extends GetxController{
   void goToNextPage() {
-    Get.to(HomePage());
+    Get.off(LoginPage());
   }
 }

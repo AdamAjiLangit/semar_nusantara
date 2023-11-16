@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 const Color primaryColor = Color.fromRGBO(123, 46, 66, 1);
 const Color secondaryColor = Color.fromRGBO(255, 255, 255, 1);
 const Color primaryTextColor = Colors.black;
+const Color greyFix = Color(0xFF9FADBC);
 const Color lineColor = Color.fromRGBO(232, 232, 232, 100);
 const Color offButtonColor = Color.fromRGBO(203, 203, 203, 1);
 const Color warningColor = Color.fromRGBO(143, 42, 42, 1);
@@ -25,7 +26,7 @@ TextStyle buttonStyle({required final color}) {
 
 TextStyle appBarText = GoogleFonts.poppins(
     textStyle: TextStyle(
-        color: primaryTextColor,
+        color: greyFix,
         fontWeight: FontWeight.w500,
         fontSize: figmaFontsize(14)));
 
@@ -43,9 +44,21 @@ TextStyle moneyMiniText = GoogleFonts.poppins(
 
 TextStyle headerText = GoogleFonts.poppins(
     textStyle: TextStyle(
+        color: secondaryColor,
+        fontWeight: FontWeight.w600,
+        fontSize: figmaFontsize(18)));
+
+TextStyle headerTextblack = GoogleFonts.poppins(
+    textStyle: TextStyle(
         color: primaryTextColor,
         fontWeight: FontWeight.w600,
         fontSize: figmaFontsize(18)));
+
+TextStyle headerelMessiri = GoogleFonts.elMessiri(
+    textStyle: TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: figmaFontsize(32)));
 
 TextStyle subheaderText = GoogleFonts.poppins(
     textStyle: TextStyle(
@@ -58,6 +71,10 @@ TextStyle commonText = GoogleFonts.poppins(
         color: primaryTextColor,
         fontWeight: FontWeight.w400,
         fontSize: figmaFontsize(15)));
+
+TextStyle textField = GoogleFonts.poppins(
+    color: primaryTextColor
+);
 
 //IMAGE ASSETS
 String logo = "assets/images/semarnusantara.png";

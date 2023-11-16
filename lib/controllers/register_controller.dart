@@ -1,69 +1,62 @@
 import 'dart:convert';
-import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:metal_marketplace/pages/HomePage.dart';
 
 import '../routes/route_name.dart';
 
-class LoginController extends GetxController {
-  late final SharedPreferences prefs;
+class RegisterController extends GetxController {
   TextEditingController? cUsername;
   TextEditingController? cPass;
+  TextEditingController? cName;
+  TextEditingController? cEmail;
   RxBool passwordObscure = true.obs;
 
   @override
   void onInit() {
     // TODO: implement onInit
     super.onInit();
-    initializePrefs();
     cUsername = new TextEditingController();
     cPass = new TextEditingController();
-  }
-
-  void initializePrefs() async {
-    prefs = await SharedPreferences.getInstance();
+    cName = new TextEditingController();
+    cEmail = new TextEditingController();
   }
 
   void togglePasswordVisibility() {
     passwordObscure.value = !passwordObscure.value;
   }
 
-  void Login() async {
-    final baseUrl = 'https://mediadwi.com/api/latihan/login';
+  void Register() async {
+    final baseUrl = 'https://mediadwi.com/api/latihan/register-user';
     final response = await http.post(
-      Uri.parse(baseUrl),
-      body:{
-        "username" :  cUsername?.text,
-        "password" :  cPass?.text,
-      },
+        Uri.parse(baseUrl),
+        body:{
+          "username" :  cUsername?.text,
+          "password" :  cPass?.text,
+          "full_name" :  cName?.text,
+          "email" :  cEmail?.text,
+        }
     );
-
     if (response.statusCode == 200) {
       try {
         final Map<String, dynamic> getData = jsonDecode(response.body);
         final status = getData["status"];
 
         if (status == true) {
-          final token = getData["token"];
           final message = getData["message"];
-          final password = cPass;
-          print("Token : $token");
-          await prefs.setString('token', token);
-          await prefs.setString('password', password.toString());
+          print("Token : $message");
           Get.snackbar(
             "Success",
             "$message",
             duration: Duration(seconds: 3),
           );
-          Get.off(HomePage());
+          Get.offNamed(RouteName.home);
         } else if (status == false) {
           final message = getData["message"];
           print("message : $message");
           Get.snackbar(
-            "Failed",
+            "Gagal Login",
             "$message",
             duration: Duration(seconds: 3),
           );
