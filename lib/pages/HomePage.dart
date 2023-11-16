@@ -12,9 +12,6 @@ class HomePage extends StatelessWidget {
     double marginSize = 30.0;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home Page'),
-      ),
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(

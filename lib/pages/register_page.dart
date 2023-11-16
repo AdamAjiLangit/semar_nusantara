@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,145 +15,200 @@ class RegisterPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: const Color(0xFF4A7971),
-      body: Stack(
-        children: [
-          SafeArea(
-            child: SingleChildScrollView(
+      body: Obx(() => controller.isLoading.value
+          ? Center(
+              child: CircularProgressIndicator(),
+            )
+          : Padding(
+              padding: const EdgeInsets.all(10),
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                child: Stack(
                   children: [
-                    Icon(
-                      Icons.account_circle,
-                      size: screenWidth * 0.4, // Adjust the size as needed
-                      color: Color(0xFFFFDA33), // Adjust the color as needed
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Text(
-                      "Register",
-                      style: GoogleFonts.poppins(
-                        fontSize: 36,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xFFFFFFFF),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            left: screenWidth * 0.05,
-                            right: screenWidth * 0.05,
-                            top: screenHeight * 0.020),
-                        child: myForm(context, Icons.account_circle, 'Name', false,
-                            TextInputType.name, controller.cName)),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            left: screenWidth * 0.05,
-                            right: screenWidth * 0.05,
-                            top: screenHeight * 0.020),
-                        child: myForm(context, Icons.account_circle, 'Username',
-                            false, TextInputType.text, controller.cUsername)),
-                    Padding(
-                        padding: EdgeInsets.only(
-                            left: screenWidth * 0.05,
-                            right: screenWidth * 0.05,
-                            top: screenHeight * 0.020),
-                        child: myForm(context, Icons.email, 'Email', false,
-                            TextInputType.emailAddress, controller.cEmail)),
-                    Padding(
-                      padding: EdgeInsets.only(
-                          left: screenWidth * 0.05,
-                          right: screenWidth * 0.05,
-                          top: screenHeight * 0.020),
-                      child: Obx(() {
-                        return myPassword(
-                          context,
-                          Icons.lock,
-                          'Password',
-                          controller.passwordObscure.value,
-                          TextInputType.visiblePassword,
-                          controller.cPass,
-                          () {
-                            controller.togglePasswordVisibility();
-                          },
-                        );
-                      }),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.off(
-                              () => LoginPage(),
-                          transition: Transition.fadeIn,
-                        );
-                      },
-                      child: Container(
-                        child: Text(
-                          "don`t have account?",
-                          style: GoogleFonts.lato(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xFFFFFFFF),
-                            decoration: TextDecoration.underline,
-                            shadows: [
-                              BoxShadow(
-                                color:
-                                Colors.black.withOpacity(0.5), // Shadow color
-                                blurRadius:
-                                1, // Increase blurRadius for a softer shadow
-                                offset:
-                                Offset(0, 4), // Offset in x and y directions
+                    SafeArea(
+                      child: SingleChildScrollView(
+                        child: Container(
+                          margin: EdgeInsets.only(right: 35.0, top: 32.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Image.asset(
+                                    logo,
+                                    width: 150,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 35.0, top: 32.0),
+                                child: Text(
+                                  'Sign Up',
+                                  style: headerelMessiri,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 60,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 35.0),
+                                child: myForm(
+                                  context,
+                                  Icons.account_box,
+                                  'Name',
+                                  false,
+                                  TextInputType.name,
+                                  controller.cName,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 35.0),
+                                child: myForm(
+                                  context,
+                                  Icons.account_circle,
+                                  'Username',
+                                  false,
+                                  TextInputType.text,
+                                  controller.cUsername,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 35.0),
+                                child: myForm(
+                                  context,
+                                  Icons.email,
+                                  'Email',
+                                  false,
+                                  TextInputType.emailAddress,
+                                  controller.cEmail,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 4,
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(left: 35.0),
+                                  child: Obx(() {
+                                    return myPassword(
+                                      context,
+                                      Icons.lock,
+                                      'Password',
+                                      controller.passwordObscure.value,
+                                      TextInputType.visiblePassword,
+                                      controller.cPass,
+                                      () {
+                                        controller.togglePasswordVisibility();
+                                      },
+                                    );
+                                  }),
+                                  padding: EdgeInsets.symmetric(
+                                      vertical: screenHeight * 0.020)),
+                              SizedBox(
+                                height: 23,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 35.0),
+                                child: ElevatedButton(
+                                  onPressed: () {
+                                    controller.Register();
+                                    print(controller.isLoading.value);
+                                  },
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: primaryColor,
+                                    minimumSize:
+                                        Size.fromHeight(screenHeight * 0.070),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Sign Up',
+                                    style: headerText,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 35,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 32.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text("Or", style: headerTextblack),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 25,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 32.0),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        print('Google icon clicked');
+                                      },
+                                      child: SvgPicture.asset(
+                                        'Icon/google.svg',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 25,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(left: 32.0),
+                                child: Center(
+                                  child: RichText(
+                                    text: TextSpan(
+                                      children: <TextSpan>[
+                                        TextSpan(
+                                          text: "already have an account? ",
+                                          style: appBarText,
+                                        ),
+                                        TextSpan(
+                                          text: "Click here",
+                                          style: TextStyle(
+                                            color: primaryColor,
+                                            decoration:
+                                                TextDecoration.underline,
+                                          ),
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () {
+                                              Get.to(LoginPage());
+                                            },
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: screenHeight * 0.01),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(bottom: screenHeight * 0.010),
-
-                      child: ElevatedButton(
-                        onPressed: () {
-                          controller.Register();
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: Color(0xFFFFDA33), // Set the button color
-                          minimumSize: Size(
-                            MediaQuery.of(context).size.width *
-                                0.8, // 80% of the screen width
-                            70, // Set a fixed height
-                          ),
-                        ),
-                        child: Text(
-                          'Register',
-                          style: TextStyle(color: primaryColor),
-                        ),
-                      ),
-                    ),
+                    )
                   ],
                 ),
               ),
-            ),
-          )
-        ],
-      ),
+            )),
     );
   }
 }

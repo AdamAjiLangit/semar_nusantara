@@ -8,7 +8,7 @@ Widget myForm(BuildContext context, IconData icon, String label, bool obscure, T
     controller: controller,
     cursorColor: primaryColor,
     decoration: InputDecoration(
-      labelText: "Username",
+      labelText: label,
       filled: true,
       fillColor: Colors.white,
       contentPadding:

@@ -13,6 +13,8 @@ class LoginController extends GetxController {
   TextEditingController? cUsername;
   TextEditingController? cPass;
   RxBool passwordObscure = true.obs;
+  RxBool isLoading = false.obs;
+  RxBool isSuccess = false.obs;
 
   @override
   void onInit() {
@@ -33,6 +35,7 @@ class LoginController extends GetxController {
 
   void Login() async {
     final baseUrl = 'https://mediadwi.com/api/latihan/login';
+    isLoading.value = true;
     final response = await http.post(
       Uri.parse(baseUrl),
       body:{
@@ -53,13 +56,15 @@ class LoginController extends GetxController {
           print("Token : $token");
           await prefs.setString('token', token);
           await prefs.setString('password', password.toString());
+          Get.off(HomePage());
+          isSuccess.value = true;
           Get.snackbar(
             "Success",
             "$message",
             duration: Duration(seconds: 3),
           );
-          Get.off(HomePage());
         } else if (status == false) {
+          isLoading.value = false;
           final message = getData["message"];
           print("message : $message");
           Get.snackbar(
