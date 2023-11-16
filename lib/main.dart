@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:metal_marketplace/pages/HomePage.dart';
 import 'package:metal_marketplace/pages/LandingPage.dart';
 import 'package:metal_marketplace/pages/LoginPage.dart';
-import 'package:metal_marketplace/pages/Register.dart';
 import 'package:metal_marketplace/pages/SplashScreen.dart';
 
 void main() {
@@ -16,7 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
       ),
