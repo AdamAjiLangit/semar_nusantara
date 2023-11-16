@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:metal_marketplace/controllers/SplashScreen_Controller.dart';
+import 'package:metal_marketplace/helper/themes.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashController splashScreenController =
@@ -11,7 +12,16 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(child: Text("splash screen"),),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              logo,
+              width: 250,
+              height: 250,
+            ),
+          ],
+        ),
       ),
     );
   }
