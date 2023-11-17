@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CalatogPage extends StatelessWidget {
-  const CalatogPage({super.key});
+class CatalogPage extends StatelessWidget {
+  const CatalogPage({super.key});
 
   @override
   Widget build(BuildContext context) {
