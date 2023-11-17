@@ -23,3 +23,7 @@ class onPressedToController extends GetxController{
     Get.off(LoginPage());
   }
 }
+
+class LandingPageController extends GetxController{
+
+}

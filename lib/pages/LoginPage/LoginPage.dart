@@ -7,7 +7,6 @@ import 'package:metal_marketplace/pages/RegisterPage/register_page.dart';
 import 'controller/Login_Controller.dart';
 import '../../helper/textFrom.dart';
 import '../../helper/themes.dart';
-import '../../routes/route_name.dart';
 
 class LoginPage extends StatelessWidget {
   final controller = Get.put(LoginController());
