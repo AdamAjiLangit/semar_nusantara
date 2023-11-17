@@ -24,6 +24,12 @@ TextStyle buttonStyle({required final color}) {
           fontSize: figmaFontsize(24)));
 }
 
+TextStyle titletext = GoogleFonts.roboto(
+    textStyle: TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.bold,
+        fontSize: figmaFontsize(24)));
+
 TextStyle appBarText = GoogleFonts.poppins(
     textStyle: TextStyle(
         color: greyFix,
@@ -78,9 +84,25 @@ TextStyle commonText = GoogleFonts.poppins(
         fontWeight: FontWeight.w400,
         fontSize: figmaFontsize(15)));
 
+TextStyle commonRoboto = GoogleFonts.roboto(
+    textStyle: TextStyle(
+        color: greyFix,
+        fontWeight: FontWeight.w500,
+        fontSize: figmaFontsize(15)));
+
+TextStyle buttonRoboto = GoogleFonts.roboto(
+  textStyle: TextStyle(
+    fontSize: figmaFontsize(16),
+    fontWeight: FontWeight.w600,
+    color: Color(0xFF1D3A70),
+  )
+);
 //IMAGE ASSETS
 String google = "assets/images/logo/google.png";
 String facebook = "assets/images/logo/facebook.png";
+String setting = "assets/images/icon/setting.png";
+String lock = "assets/images/icon/lock.png";
+String logout = "assets/images/icon/logout.png";
 String semar = "assets/images/logo/semar.jpeg";
 String logo = "assets/images/logo/semarnusantara.png";
 String promote1 = "assets/images/promotion/promote1.jpg";
