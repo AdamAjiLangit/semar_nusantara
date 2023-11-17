@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
-import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage.dart';
-import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
-import 'package:metal_marketplace/pages/SplashScreen/SplashScreen.dart';
-import 'package:metal_marketplace/pages/RegisterPage/register_page.dart';
+import 'package:metal_marketplace/pages/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      title: 'Flutter Demo',
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: RegisterPage(),
+      // home: LoginPage(title: ""),
+      debugShowCheckedModeBanner: false,
+      home: SplashScreen(),
     );
   }
 }
