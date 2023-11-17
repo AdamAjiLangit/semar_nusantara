@@ -163,8 +163,18 @@ class RegisterPage extends StatelessWidget {
                                       onTap: () {
                                         print('Google icon clicked');
                                       },
-                                      child: SvgPicture.asset(
-                                        'Icon/google.svg',
+                                      child: Image.asset(
+                                        google,
+                                        width: 80,
+                                      ),
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {
+                                        print('Facebook icon clicked');
+                                      },
+                                      child: Image.asset(
+                                        facebook,
+                                        width: 80,
                                       ),
                                     ),
                                   ],

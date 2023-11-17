@@ -78,19 +78,29 @@ TextStyle commonText = GoogleFonts.poppins(
         fontWeight: FontWeight.w400,
         fontSize: figmaFontsize(15)));
 
-TextStyle textField = GoogleFonts.poppins(
-    color: primaryTextColor
-);
-
 //IMAGE ASSETS
-String logo = "assets/images/semarnusantara.png";
-String semar = "assets/images/semar.jpeg";
-String nikicollection = "assets/images/nikitawillycollection.jpeg";
-String ballcollection = "assets/images/ballsetcollection.jpeg";
-String caribeacollection = "assets/images/caribeacollection.png";
-String solitairecollection = "assets/images/solitairecollection.jpeg";
-String positaneoriginal = "assets/images/promote1.jpg";
-String soulsister = "assets/images/promote2.jpg";
-String extraordinarysister = "assets/images/promote3.jpg";
-String love = "assets/images/promote4.jpg";
-String ball = "assets/images/ball.jpeg";
+String google = "assets/images/logo/google.png";
+String facebook = "assets/images/logo/facebook.png";
+String semar = "assets/images/logo/semar.jpeg";
+String logo = "assets/images/logo/semarnusantara.png";
+String promote1 = "assets/images/promotion/promote1.jpg";
+String promote2 = "assets/images/promotion/promote2.jpg";
+String promote3 = "assets/images/promotion/promote3.jpg";
+String promote4 = "assets/images/promotion/promote4.jpg.png";
+String ball = "assets/images/collection/ballcollection.jpeg";
+String setball = "assets/images/collection/ballsetcollection.jpeg";
+String caribea = "assets/images/collection/caribeacollection.png";
+String nikita = "assets/images/collection/nikitawillycollection.jpeg";
+String solitaire = "assets/images/collection/solitairecollection.jpeg";
+String gelangemasbolamrican = "assets/images/categories/item/gelang/Gelang_Emas_Bola_Mrican_3_Warna_10K _Semar_Nusantara.jpeg";
+String gelangemasfancylove = "assets/images/categories/item/gelang/Gelang_Emas_Fancy_Love_My_Letter_Bulat_Gold_10K_Semar_Nusantara.jpeg";
+String gelangemashollowniki = "assets/images/categories/item/gelang/Gelang_Emas_Hollow_Niki_Chain_Gold_10K_Semar_Nusantara.jpeg";
+String gelangemasjedar = "assets/images/categories/item/gelang/Gelang_Emas_Jedar_Love_Gold_Double_Layer_10K_Semar_Nusantara.jpeg";
+String gelangemasthesya = "assets/images/categories/item/gelang/Gelang_Emas_Thesya_Butterfly_Hope_Gold_10K_Semar_Nusantara.jpeg";
+String gelangserut = "assets/images/categories/item/gelang/Gelang_Serut_Emas_Mini_Aurel_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemascassano = "assets/images/categories/item/kalung/Kalung_Emas_Cassano_Farasha_Butterfly_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasgliter = "assets/images/categories/item/kalung/Kalung_Emas_Gliter Bola_Satin_Rose_White_Gold_10K_Semar_usantara.jpeg";
+String kalungemasrhinestone = "assets/images/categories/item/kalung/Kalung_Emas_Round_Rhinestone_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasstela = "assets/images/categories/item/kalung/Kalung_Emas_Stela_Variasi_Bola_Gliter_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasdaun = "assets/images/categories/item/kalung/Kalung_Emas_Variasi_Daun_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasveeline = "assets/images/categories/item/kalung/Kalung_Emas_Veeline_Gold_10K_Semar_Nusantara.jpeg ";

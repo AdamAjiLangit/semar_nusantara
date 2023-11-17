@@ -62,8 +62,11 @@ flutter:
   assets:
     - assets/Icon/svg/background.svg
     - assets/Icon/svg/google.svg
+    - assets/Icon/svg/facebook.svg
     - assets/Icon/svg/Logo.svg
     - assets/Icon/svg/splashIcon.svg
+    - assets/Images/logo/google.png
+    - assets/Images/logo/facebook.png
     - assets/images/logo/semar.jpeg
     - assets/images/logo/semarnusantara.png
     - assets/images/promotion/promote1.jpg
