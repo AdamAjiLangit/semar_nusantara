@@ -41,6 +41,11 @@ TextStyle moneyMiniText = GoogleFonts.poppins(
         color: primaryTextColor,
         fontWeight: FontWeight.w400,
         fontSize: figmaFontsize(12)));
+TextStyle titleText = GoogleFonts.poppins(
+  fontSize: 14.0,
+  fontWeight: FontWeight.w400,
+  color: Color(0xFFFFFFFF),
+);
 
 TextStyle headerText = GoogleFonts.poppins(
     textStyle: TextStyle(
@@ -65,6 +70,7 @@ TextStyle subheaderText = GoogleFonts.poppins(
         color: primaryTextColor,
         fontWeight: FontWeight.w500,
         fontSize: figmaFontsize(16)));
+TextStyle textField = TextStyle(color: primaryTextColor);
 
 TextStyle commonText = GoogleFonts.poppins(
     textStyle: TextStyle(
