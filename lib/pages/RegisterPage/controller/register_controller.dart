@@ -6,7 +6,6 @@ import 'package:http/http.dart' as http;
 import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../routes/route_name.dart';
 
 class RegisterController extends GetxController {
   TextEditingController? cUsername;

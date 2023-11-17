@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
 
-import '../../../routes/route_name.dart';
 
 class LoginController extends GetxController {
   late final SharedPreferences prefs;
