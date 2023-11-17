@@ -1,10 +1,8 @@
 import 'package:get/get.dart';
-import 'package:metal_marketplace/pages/HomePage.dart';
-import 'package:metal_marketplace/pages/LandingPage.dart';
-import 'package:metal_marketplace/pages/LoginPage.dart';
+import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage.dart';
+import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:metal_marketplace/pages/LoginPage.dart';
-import 'package:metal_marketplace/pages/HomePage.dart';
+
 
 class SplashController extends GetxController {
   late final SharedPreferences prefs;

@@ -31,7 +31,7 @@
                       ),
                       SizedBox(height: marginSize * 2,),
                       Image.asset(
-                        love,
+                        promote4,
                         width: 275,
                       ),
                       SizedBox(height: marginSize),
