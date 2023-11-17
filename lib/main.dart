@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:metal_marketplace/pages/HomePage.dart';
-import 'package:metal_marketplace/pages/LandingPage.dart';
-import 'package:metal_marketplace/pages/LoginPage.dart';
-import 'package:metal_marketplace/pages/SplashScreen.dart';
-import 'package:metal_marketplace/pages/register_page.dart';
+import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
+import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage.dart';
+import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
+import 'package:metal_marketplace/pages/SplashScreen/SplashScreen.dart';
+import 'package:metal_marketplace/pages/RegisterPage/register_page.dart';
 
 void main() {
   runApp(const MyApp());
