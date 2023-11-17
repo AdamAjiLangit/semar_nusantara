@@ -1,15 +1,15 @@
 import 'package:get/get.dart';
 
-import 'package:metal_marketplace/pages/register_page.dart';
+import 'package:metal_marketplace/pages/RegisterPage/register_page.dart';
 import 'package:metal_marketplace/routes/route_name.dart';
-import 'package:metal_marketplace/pages/SplashScreen.dart';
-import 'package:metal_marketplace/pages/LoginPage.dart';
-import 'package:metal_marketplace/pages/HomePage.dart';
+import 'package:metal_marketplace/pages/SplashScreen/SplashScreen.dart';
+import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
+import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
 
-import '../bindings/homepage_binding.dart';
-import '../bindings/login_binding.dart';
-import '../bindings/register_binding.dart';
-import '../bindings/splashscreen_binding.dart';
+import '../pages/HomePage/binding/homepage_binding.dart';
+import '../pages/LoginPage/binding/login_binding.dart';
+import '../pages/RegisterPage/binding/register_binding.dart';
+import '../pages/SplashScreen/binding/splashscreen_binding.dart';
 
 class AppPages {
   static const INITIAL = RouteName.splash;
