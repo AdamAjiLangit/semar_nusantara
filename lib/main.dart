@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/global_component/Navigation_Menu.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_components_one.dart';
+import 'package:metal_marketplace/pages/HomePage/components/home_components_two.dart';
+import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
+import 'package:metal_marketplace/pages/SplashScreen/SplashScreen.dart';
 import 'package:metal_marketplace/routes/app_pages.dart';
 
 void main() {
@@ -22,7 +25,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
       // home: NavigationMenu(),
-      home: const HomePageComponentOne(),
+      home:  const HomeComponentTwo(),
     );
   }
 }

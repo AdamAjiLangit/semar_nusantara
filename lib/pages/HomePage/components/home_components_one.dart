@@ -8,29 +8,18 @@ class HomePageComponentOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size mediaQuery = MediaQuery.of(context).size;
-    double marginSize = 30.0;
     final double width = mediaQuery.width;
     final double height = mediaQuery.height;
-
-    return AppBar(
-      backgroundColor: secondaryColor,
-      elevation: 0,
-      toolbarHeight: height * 0.1,
-      title: Container(
-        padding: EdgeInsets.symmetric(horizontal: marginSize),
-        child: Row(
+    return Scaffold(
+      appBar:       AppBar(
+        backgroundColor: secondaryColor,
+        centerTitle: false,
+        elevation: 0,
+        toolbarHeight: height * 0.1,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              width: width * 0.1,
-              height: width * 0.1,
-              decoration: const BoxDecoration(
-                color: secondaryColor,
-              ),
-              child: Transform.scale(
-                scale: 10,
-                child: Image.asset(logo),
-              ),
-            ),
+            Image.asset(logo, scale: 4,),
             InkWell(
               onTap: () {
                 Get.toNamed('/cart');
@@ -47,10 +36,11 @@ class HomePageComponentOne extends StatelessWidget {
                   color: secondaryColor,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
     );
+
   }
 }

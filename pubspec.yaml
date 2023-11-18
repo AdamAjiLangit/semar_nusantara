@@ -61,37 +61,14 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/Icon/svg/background.svg
-    - assets/Icon/svg/google.svg
-    - assets/Icon/svg/facebook.svg
-    - assets/Icon/svg/Logo.svg
-    - assets/Icon/svg/splashIcon.svg
-    - assets/Images/logo/google.png
-    - assets/Images/logo/facebook.png
-    - assets/images/logo/semar.jpeg
-    - assets/images/logo/semarnusantara.png
-    - assets/images/promotion/promote1.jpg
-    - assets/images/promotion/promote2.jpg
-    - assets/images/promotion/promote3.jpg
-    - assets/images/promotion/promote4.jpg
-    - assets/images/collection/ballcollection.jpeg
-    - assets/images/collection/ballsetcollection.jpeg
-    - assets/images/collection/caribeacollection.png
-    - assets/images/collection/nikitawillycollection.jpeg
-    - assets/images/collection/solitairecollection.jpeg
-    - assets/images/categories/item/gelang/Gelang_Emas_Bola_Mrican_3_Warna_10K _Semar_Nusantara.jpeg
-    - assets/images/categories/item/gelang/Gelang_Emas_Fancy_Love_My_Letter_Bulat_Gold_10K_Semar_Nusantara.jpeg
-    - assets/images/categories/item/gelang/Gelang_Emas_Hollow_Niki_Chain_Gold_10K_Semar_Nusantara.jpeg
-    - assets/images/categories/item/gelang/Gelang_Emas_Jedar_Love_Gold_Double_Layer_10K_Semar_Nusantara.jpeg
-    - assets/images/categories/item/gelang/Gelang_Emas_Jedar_Love_Gold_Double_Layer_10K_Semar_Nusantara.jpeg
-    - assets/images/categories/item/gelang/Gelang_Emas_Thesya_Butterfly_Hope_Gold_10K_Semar_Nusantara.jpeg
-    - assets/images/categories/item/gelang/Gelang_Serut_Emas_Mini_Aurel_Gold_10K_Semar_Nusantara.jpeg
-    - assets/images/categories/item/kalung/Kalung_Emas_Cassano_Farasha_Butterfly_Gold_10K_Semar_Nusantara.jpeg 
-    - assets/images/categories/item/kalung/Kalung_Emas_Gliter Bola_Satin_Rose_White_Gold_10K_Semar_usantara.jpeg 
-    - assets/images/categories/item/kalung/Kalung_Emas_Round_Rhinestone_Gold_10K_Semar_Nusantara.jpeg 
-    - assets/images/categories/item/kalung/Kalung_Emas_Stela_Variasi_Bola_Gliter_Gold_10K_Semar_Nusantara.jpeg 
-    - assets/images/categories/item/kalung/Kalung_Emas_Variasi_Daun_Gold_10K_Semar_Nusantara.jpeg 
-    - assets/images/categories/item/kalung/Kalung_Emas_Veeline_Gold_10K_Semar_Nusantara.jpeg 
+    - assets/images/
+    - assets/images/categories/
+    - assets/images/collection/
+    - assets/images/icon/
+    - assets/images/logo/
+    - assets/images/promotion/
+    - assets/Icon/
+    - assets/Icon/svg/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
