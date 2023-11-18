@@ -1,12 +1,8 @@
-import 'dart:html';
-import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:metal_marketplace/helper/themes.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:metal_marketplace/pages/ProfilePage/controller/profile_controller.dart';
 
 class ProfilePage extends StatelessWidget {

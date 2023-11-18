@@ -1,8 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:metal_marketplace/pages/RegisterPage/controller/register_controller.dart';
 import 'package:metal_marketplace/helper/themes.dart';
