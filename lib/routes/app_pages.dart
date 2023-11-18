@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:metal_marketplace/pages/CatalogPage/Binding/HomePage_Binding.dart';
 import 'package:metal_marketplace/pages/CatalogPage/CatalogPage.dart';
-import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
+import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 import 'package:metal_marketplace/pages/HomePage/binding/homepage_binding.dart';
 import 'package:metal_marketplace/pages/LandingPage/Binding/LandingPage_Binding.dart';
 import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage.dart';

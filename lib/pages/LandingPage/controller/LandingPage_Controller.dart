@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
+import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage.dart';
 import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage2.dart';
 import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
