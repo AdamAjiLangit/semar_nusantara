@@ -12,9 +12,10 @@ class HomeComponentTwo extends StatelessWidget {
     final double height = mediaQuery.height;
 
     return Container(
-       width: width * 0.6,
+      width: width * 0.6,
       height: height * 0.6,
-      decoration: BoxDecoration(color: Colors.black,
+      decoration: BoxDecoration(
+        color: Colors.black,
       ),
       child: Image.asset(caribea),
     );

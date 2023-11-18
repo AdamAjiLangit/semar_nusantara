@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
-        body: Obx(() => controller.isLoading.value
+        body: Obx(() => controller.isLoading.value == true
             ? Center(
                 child: CircularProgressIndicator(),
               )

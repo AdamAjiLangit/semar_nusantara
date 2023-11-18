@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metal_marketplace/pages/HomePage/components/home_components_two.dart';
+import 'package:metal_marketplace/pages/HomePage/controller/HomePage_Controller.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
-class HomePageComponentOne extends StatelessWidget {
-  const HomePageComponentOne({super.key});
+class HomePage extends StatelessWidget {
+  final HomePageController controller = Get.put(HomePageController());
 
   @override
   Widget build(BuildContext context) {
-    final Size mediaQuery = MediaQuery.of(context).size;
-    final double width = mediaQuery.width;
-    final double height = mediaQuery.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
+    double marginSize = 30.0;
+
     return Scaffold(
-      appBar:       AppBar(
+      appBar: AppBar(
         backgroundColor: secondaryColor,
         centerTitle: false,
         elevation: 0,
-        toolbarHeight: height * 0.1,
+        
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -25,8 +28,8 @@ class HomePageComponentOne extends StatelessWidget {
                 Get.toNamed('/cart');
               },
               child: Container(
-                width: width * 0.1,
-                height: width * 0.1,
+                width: screenWidth * 0.1,
+                height: screenHeight * 0.1,
                 decoration: const BoxDecoration(
                   color: primaryColor,
                   shape: BoxShape.circle,
@@ -40,7 +43,17 @@ class HomePageComponentOne extends StatelessWidget {
           ],
         ),
       ),
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: marginSize),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              
+              HomeComponentTwo(),
+            ],
+          ),
+        ),
+      ),
     );
-
   }
 }

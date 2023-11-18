@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:metal_marketplace/routes/app_pages.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:metal_marketplace/pages/HomePage/HomePage.dart';
-
+import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 
 class LoginController extends GetxController {
   late final SharedPreferences prefs;
@@ -37,9 +37,9 @@ class LoginController extends GetxController {
     isLoading.value = true;
     final response = await http.post(
       Uri.parse(baseUrl),
-      body:{
-        "username" :  cUsername?.text,
-        "password" :  cPass?.text,
+      body: {
+        "username": cUsername?.text,
+        "password": cPass?.text,
       },
     );
 
@@ -49,27 +49,27 @@ class LoginController extends GetxController {
         final status = getData["status"];
 
         if (status == true) {
+          isLoading.value = true;
           final token = getData["token"];
           final message = getData["message"];
           final password = cPass;
           print("Token : $token");
           await prefs.setString('token', token);
           await prefs.setString('password', password.toString());
-          Get.off(HomePage());
-          isSuccess.value = true;
+
+          Get.offNamed(Routes.HOME_PAGE);
           Get.snackbar(
             "Success",
             "$message",
-            duration: Duration(seconds: 3),
           );
-        } else if (status == false) {
           isLoading.value = false;
+        } else if (status == false) {
+          isLoading.value = true;
           final message = getData["message"];
           print("message : $message");
           Get.snackbar(
             "Failed",
             "$message",
-            duration: Duration(seconds: 3),
           );
         }
       } catch (e) {
