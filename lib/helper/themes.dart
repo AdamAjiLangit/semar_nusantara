@@ -6,6 +6,7 @@ const Color primaryColor = Color.fromRGBO(123, 46, 66, 1);
 const Color secondaryColor = Color.fromRGBO(255, 255, 255, 1);
 const Color primaryTextColor = Colors.black;
 const Color greyFix = Color(0xFF9FADBC);
+const Color greyWhite = Color(0xFFEFEFEF);
 const Color lineColor = Color.fromRGBO(232, 232, 232, 100);
 const Color offButtonColor = Color.fromRGBO(203, 203, 203, 1);
 const Color warningColor = Color.fromRGBO(143, 42, 42, 1);

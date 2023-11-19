@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      // initialRoute: AppPages.INITIAL,
-      // getPages: AppPages.routes,
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
       home: ProfilePage(),
       // home:  const HomeComponentTwo(),
     );
