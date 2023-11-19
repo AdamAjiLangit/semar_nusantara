@@ -3,10 +3,11 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:metal_marketplace/helper/themes.dart';
+import 'package:metal_marketplace/pages/ProfilePage/Editprofile.dart';
 import 'package:metal_marketplace/pages/ProfilePage/controller/profile_controller.dart';
 
 class ProfilePage extends StatelessWidget {
-  final ProfileController profileController = Get.put(ProfileController());
+  ProfileController profileController = Get.put(ProfileController());
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +15,7 @@ class ProfilePage extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: secondaryColor,
         title: Text(
           'Profile',
           style: GoogleFonts.poppins(
@@ -32,161 +34,137 @@ class ProfilePage extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Center(
-                        child: Stack(
-                          children: [
-                            Obx(() {
-                              final _image = profileController.image;
-                              return _image != null
-                                  ? CircleAvatar(
-                                backgroundColor: Colors.grey,
-                                radius: 64,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color:
-                                        Colors.black.withOpacity(0.3),
-                                        blurRadius: 8,
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                backgroundImage: MemoryImage(_image!),
-                              )
-                                  : CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: 64,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white,
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color:
-                                        Colors.black.withOpacity(0.3),
-                                        blurRadius: 8,
-                                        offset: Offset(0, 3),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            }),
-                            Positioned(
-                              bottom: 1,
-                              left: 74,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: primaryColor,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: IconButton(
-                                  onPressed: () {
-                                    profileController.selectImage();
-                                  },
-                                  icon: Icon(
-                                    Icons.add_a_photo,
-                                    size: 38,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                          height:
-                          16), // Add space between the circle and the text
-                      Text(
-                        'Username',
-                        style: titletext,
-                      ),
-                      Text(
-                        'Email',
-                        style: commonRoboto,
-                      ),
-                      SizedBox(
-                        height: 40,
-                      ),
-                      Column(
+                  child: Obx(
+                    () {
+                      final _image = profileController.image;
+                      return Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              // Handle button 1 tap
-                            },
-                            icon: Image.asset(
-                              setting, // Replace with your actual icon asset for button 1
-                              width: 60,
-                            ),
-                            label: Padding(
-                              padding: EdgeInsets.only(left: 32, right: 102),
-                              child: Text(
-                                'Account',
-                                style: buttonRoboto,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              elevation: 0,
+                          Center(
+                            child: Stack(children: [
+                              _image != null
+                                  ? CircleAvatar(
+                                      backgroundColor: Colors.grey,
+                                      radius: 64,
+                                      backgroundImage: MemoryImage(_image!),
+                                    )
+                                  : CircleAvatar(
+                                      backgroundColor: Colors.white,
+                                      radius: 64,
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.white,
+                                          boxShadow: [
+                                            BoxShadow(
+                                              color:
+                                                  Colors.black.withOpacity(0.3),
+                                              blurRadius: 8,
+                                              offset: Offset(0, 3),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                            ]),
+                          ),
+                          SizedBox(
+                              height:
+                                  16), // Add space between the circle and the text
+                          Center(
+                            child: Text(
+                              profileController.ctrUsername.value,
+                              style: titletext,
                             ),
                           ),
-                          SizedBox(height: 16), // Add space between the buttons
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              // Handle button 2 tap
-                            },
-                            icon: Image.asset(
-                              lock, // Replace with your actual icon asset for button 2
-                              width: 60,
-                            ),
-                            label: Padding(
-                              padding: EdgeInsets.only(left: 32, right: 32),
-                              child: Text(
-                                'Change Password',
-                                style: buttonRoboto,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              elevation: 0,
+                          Center(
+                            child: Text(
+                              profileController.ctrEmail.value,
+                              style: commonRoboto,
                             ),
                           ),
-                          SizedBox(height: 60), // Add space between the buttons
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              // Handle button 2 tap
-                            },
-                            icon: Image.asset(
-                              logout, // Replace with your actual icon asset for button 2
-                              width: 60,
-                            ),
-                            label: Padding(
-                              padding: EdgeInsets.only(left: 32, right: 102),
-                              child: Text(
-                                'Log Out',
-                                style: buttonRoboto,
+                          SizedBox(
+                            height: 40,
+                          ),
+                          Column(
+                            children: [
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  // Handle button 1 tap
+                                },
+                                icon: Image.asset(
+                                  setting, // Replace with your actual icon asset for button 1
+                                  width: 60,
+                                ),
+                                label: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: screenWidth * 0.10),
+                                  child: Text(
+                                    'Account',
+                                    style: buttonRoboto,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.transparent,
+                                  elevation: 0,
+                                ),
                               ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              elevation: 0,
-                            ),
+                              SizedBox(
+                                  height: 16), // Add space between the buttons
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  Get.to(EditProfile());
+                                },
+                                icon: Image.asset(
+                                  lock, // Replace with your actual icon asset for button 2
+                                  width: 60,
+                                ),
+                                label: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: screenWidth * 0.06),
+                                  child: Text(
+                                    'Edit Profile',
+                                    style: buttonRoboto,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.transparent,
+                                  elevation: 0,
+                                ),
+                              ),
+                              SizedBox(
+                                  height: 60), // Add space between the buttons
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  profileController.logOut();
+                                },
+                                icon: Image.asset(
+                                  logout, // Replace with your actual icon asset for button 2
+                                  width: 60,
+                                ),
+                                label: Padding(
+                                  padding:
+                                      EdgeInsets.only(left: screenWidth * 0.10),
+                                  child: Text(
+                                    'Log Out',
+                                    style: buttonRoboto,
+                                  ),
+                                ),
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.transparent,
+                                  elevation: 0,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
-                      ),
-                    ],
+                      );
+                    },
                   ),
                 ),
               ),
             ),
-          ),
+          )
         ],
       ),
     );

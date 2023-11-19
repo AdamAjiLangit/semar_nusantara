@@ -57,12 +57,14 @@ class LoginController extends GetxController {
           await prefs.setString('token', token);
           await prefs.setString('password', password.toString());
 
-          Get.offAllNamed(Routes.HOME_PAGE);
+
           Get.snackbar(
             "Success",
             "$message",
           );
+          Get.offAllNamed(Routes.HOME_PAGE);
           isLoading.value = false;
+
         } else if (status == false) {
           isLoading.value = true;
           final message = getData["message"];
