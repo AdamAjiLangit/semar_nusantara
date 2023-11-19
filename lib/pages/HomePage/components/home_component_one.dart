@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
-class HomeComponentTwo extends StatelessWidget {
-  const HomeComponentTwo({
+class HomeComponentOne extends StatelessWidget {
+  const HomeComponentOne({
     super.key,
   });
 
@@ -32,7 +32,7 @@ class HomeComponentTwo extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 3),
             child: Image.asset(
-              caribea
+              promote1
             ),
           ),
         )
