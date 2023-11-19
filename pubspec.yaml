@@ -38,6 +38,7 @@ dependencies:
   image_picker: ^1.0.4
   shared_preferences: ^2.2.2
   page_transition: ^2.1.0
+  hovering:
 
 
   # The following adds the Cupertino Icons font to your application.
