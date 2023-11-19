@@ -57,7 +57,7 @@ class LoginController extends GetxController {
           await prefs.setString('token', token);
           await prefs.setString('password', password.toString());
 
-          Get.offNamed(Routes.HOME_PAGE);
+          Get.offAllNamed(Routes.HOME_PAGE);
           Get.snackbar(
             "Success",
             "$message",
