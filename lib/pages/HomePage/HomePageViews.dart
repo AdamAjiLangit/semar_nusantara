@@ -49,14 +49,23 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        
       ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: marginSize),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              HomeComponentTwo(),
+              HomeComponentOne(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                    Text('Collection', style: titletext),
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.only(top: 20.0),
+                child: HomeComponentTwo(),
+              ),
             ],
           ),
         ),

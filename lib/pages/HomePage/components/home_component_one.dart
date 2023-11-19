@@ -32,7 +32,7 @@ class HomeComponentOne extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 3),
             child: Image.asset(
-              promote1
+              caribea
             ),
           ),
         )
