@@ -22,7 +22,6 @@ class HomeComponentTwo extends StatelessWidget {
               return Builder(
                 builder: (BuildContext context) {
                   return Container(
-                    width: 350,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5),
                       image: DecorationImage(
@@ -36,8 +35,8 @@ class HomeComponentTwo extends StatelessWidget {
             }).toList(),
             options: CarouselOptions(
               enableInfiniteScroll: true,
-              autoPlay: true,
-              viewportFraction: 0.6,
+              autoPlay: false,
+              viewportFraction: 0.55,
               pageSnapping: true,
               autoPlayInterval: Duration(seconds: 3),
               autoPlayAnimationDuration: Duration(milliseconds: 800),
