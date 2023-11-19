@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
+import 'package:metal_marketplace/pages/HomePage/components/home_component_two.dart';
 import 'package:metal_marketplace/pages/HomePage/controller/HomePage_Controller.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
