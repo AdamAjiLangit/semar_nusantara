@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:metal_marketplace/helper/themes.dart';
-import 'package:metal_marketplace/pages/CatalogPage/CatalogPage.dart';
+import 'package:metal_marketplace/pages/CatalogPage/CatalogPageView.dart';
 import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 import 'package:metal_marketplace/pages/ProfilePage/ProfilePage.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
@@ -17,7 +17,7 @@ class NavigationMenu extends StatelessWidget {
     List<Widget> _buildScreens() {
       return [
         HomePage(),
-        CatalogPage(),
+        CatalogPageVIew(),
         ProfilePage(),
       ];
     }
