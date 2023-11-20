@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:metal_marketplace/pages/CatalogPage/Components/catalog_component_one.dart';
 
-class CatalogPage extends StatelessWidget {
-  const CatalogPage({super.key});
+class CatalogPageVIew extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

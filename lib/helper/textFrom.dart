@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
 Widget myForm(BuildContext context, IconData icon, String label, bool obscure, TextInputType inputType, TextEditingController? controller) {
@@ -60,6 +61,33 @@ Widget myPassword(BuildContext context, IconData icon, String label, bool obscur
         borderSide: BorderSide(color: primaryColor),
         borderRadius: BorderRadius.circular(10.0),
       ),
+    ),
+  );
+}
+
+Widget mySearchProduct(BuildContext context, IconData icon, String hint, TextEditingController? controller, Function(String) onSearch) {
+  double screenHeight = MediaQuery.of(context).size.height;
+  double screenWidth = MediaQuery.of(context).size.width;
+  return TextField(
+    textDirection: TextDirection.ltr,
+    controller: controller,
+    onChanged: onSearch,
+    cursorColor: primaryTextColor,
+    decoration: InputDecoration(
+      prefixIcon: Icon(
+        icon,
+        color: Colors.grey,
+      ),
+      hintText: hint,
+      filled: true, // Add this line to enable filling the background
+      fillColor: greyWhite,
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(18.0), // Set the border radius
+        borderSide: BorderSide.none, // Remove the border
+      ),
+    ),
+    style: GoogleFonts.poppins(
+      color: primaryTextColor,
     ),
   );
 }

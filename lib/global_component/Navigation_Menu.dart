@@ -17,7 +17,7 @@ class NavigationMenu extends StatelessWidget {
     List<Widget> _buildScreens() {
       return [
         HomePage(),
-        CatalogPage(),
+        CatalogPageVIew(),
         ProfilePage(),
       ];
     }

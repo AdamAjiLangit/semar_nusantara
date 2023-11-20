@@ -14,29 +14,51 @@ class HomeComponentTwo extends StatelessWidget {
     final double width = mediaQuery.width;
     final double height = mediaQuery.height;
 
-    return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        child: CarouselSlider.builder(
-            itemCount: 3,
-            options: CarouselOptions(
-              autoPlay: true,
-              viewportFraction: 0.7,
-              enlargeCenterPage: true,
-              enlargeFactor: 0.13,
-              pageSnapping: true,
-              autoPlayCurve: Curves.linearToEaseOut,
-              autoPlayAnimationDuration: Duration(seconds: 3),
+    return Container(
+        padding: EdgeInsets.only(left: 25, right: 25),git
+        child: SingleChildScrollView(
+            child: Column(children: [
+          Container(
+            width: 340,
+            margin: EdgeInsets.only(top: 30),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
             ),
-            itemBuilder: (context, index, realIndex) => ClipRRect(
-              borderRadius: BorderRadius.circular(40),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 3),
-                child: Image.asset(
-                    caribea
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(25),
+              child: CarouselSlider(
+                items: [promote1, promote2, promote3, promote4].map((i) {
+                  return Builder(
+                    builder: (BuildContext context) {
+                      return Container(
+                        width: 340,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          image: DecorationImage(
+                            image: AssetImage(i),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                }).toList(),
+                options: CarouselOptions(
+                  height: 193,
+                  initialPage: 0,
+                  enableInfiniteScroll: true,
+                  autoPlay: true,
+                  autoPlayInterval: Duration(seconds: 3),
+                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  enlargeFactor: 0.3,
+                  enlargeCenterPage: true,
+                  scrollDirection: Axis.horizontal,
                 ),
               ),
-            )
-        )
-    );
+            ),
+          )
+        ])));
   }
 }
