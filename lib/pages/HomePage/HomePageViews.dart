@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
 import 'package:metal_marketplace/widget/search.dart';
+import 'package:metal_marketplace/widget/category.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_two.dart';
 import 'package:metal_marketplace/pages/HomePage/controller/HomePage_Controller.dart';
 import 'package:metal_marketplace/helper/themes.dart';
@@ -59,7 +60,7 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               HomeComponentOne(),
               Row(

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/global_component/Navigation_Menu.dart';
+import 'package:metal_marketplace/pages/CatalogPage/CatalogPage.dart';
+import 'package:metal_marketplace/pages/Checkout/CheckoutView.dart';
+import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
 import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
 import 'package:metal_marketplace/pages/SplashScreen/SplashScreen.dart';
@@ -23,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
-      home: SplashScreen(),
+      home: CatalogPage(),
       // home:  const HomeComponentTwo(),
     );
   }

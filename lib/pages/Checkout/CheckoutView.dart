@@ -147,9 +147,9 @@ class CheckoutPage extends StatelessWidget {
                         // Harga Produk
                         Text(
                           'Rp 100.000', // Ganti dengan data harga produk
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 16,
-                            fontWeight: FontWeight.normal,
+                            fontWeight: FontWeight.w600,
                             color:
                                 primaryColor, // Sesuaikan dengan warna yang diinginkan
                           ),
@@ -174,14 +174,14 @@ class CheckoutPage extends StatelessWidget {
                       Text(
                         'Total Harga: ',
                         style: GoogleFonts.poppins(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       Text(
                         'Rp. 100.000',
                         style: GoogleFonts.poppins(
-                          fontSize: 18,
+                          fontSize: 16,
                           fontWeight: FontWeight.w600,
                           color: primaryColor,
                         ),
@@ -207,7 +207,7 @@ class CheckoutPage extends StatelessWidget {
                         'Payment:',
                         style: GoogleFonts.poppins(
                           fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
 
@@ -223,7 +223,6 @@ class CheckoutPage extends StatelessWidget {
                           decoration: BoxDecoration(
                             border: Border.all(
                               color: primaryColor,
-                              width: 1,
                             ),
                             borderRadius: BorderRadius.circular(5),
                           ),
