@@ -15,7 +15,7 @@ class HomeComponentTwo extends StatelessWidget {
     final double height = mediaQuery.height;
 
     return Container(
-        padding: EdgeInsets.only(left: 25, right: 25),git
+        padding: EdgeInsets.only(left: 25, right: 25),
         child: SingleChildScrollView(
             child: Column(children: [
           Container(
