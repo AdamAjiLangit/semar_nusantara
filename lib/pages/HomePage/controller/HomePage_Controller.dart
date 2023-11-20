@@ -10,13 +10,13 @@ class HomePageController extends GetxController {
 
   RxBool isRoutingFromHomePage = false.obs;
   TextEditingController? cSearchProduct;
-  RxInt selectedIndex = 0.obs;
-  RxString selectedCategory = "".obs;
+
 
   @override
   void onInit() {
     // TODO: implement onInit
     initializePrefs();
+    // fetchProduct();
     super.onInit();
   }
 
@@ -28,7 +28,20 @@ class HomePageController extends GetxController {
     cSearchProduct?.text.obs.value = searchText;
   }
 
-  void onCategorySelected(int index) {
-    selectedIndex.value = index;
-  }
+  // void fetchProduct () async {
+  //   try{
+  //     final response = await http.get(
+  //         Uri.parse('https://stationery-api.000webhostapp.com/api/stationery-api/')
+  //     );
+  //     if(response.statusCode == 200){
+  //       productresponsemodel.value = productResponseModelFromJson(response.body);
+  //       isLoading(false);
+  //     } else {
+  //       print('Error: ${response.statusCode}');
+  //     }
+  //   } catch (e){
+  //     print(e);
+  //   }
+  // }
+
 }
