@@ -58,9 +58,9 @@ class ProfilePage extends StatelessWidget {
                                           boxShadow: [
                                             BoxShadow(
                                               color:
-                                                  Colors.black.withOpacity(0.3),
+                                                  Colors.black.withOpacity(0.1),
                                               blurRadius: 8,
-                                              offset: Offset(0, 3),
+                                              offset: Offset(0, 1),
                                             ),
                                           ],
                                         ),
@@ -98,7 +98,7 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 label: Padding(
                                   padding:
-                                      EdgeInsets.only(left: screenWidth * 0.10),
+                                      EdgeInsets.only(left: screenWidth * 0.12),
                                   child: Text(
                                     'Account',
                                     style: buttonRoboto,
@@ -106,7 +106,10 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.transparent,
-                                  elevation: 0,
+                                  shadowColor: Color(0xFFF4F4F4),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(22.0),
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -121,7 +124,7 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 label: Padding(
                                   padding:
-                                      EdgeInsets.only(left: screenWidth * 0.06),
+                                      EdgeInsets.only(left: screenWidth * 0.08),
                                   child: Text(
                                     'Edit Profile',
                                     style: buttonRoboto,
@@ -129,7 +132,10 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.transparent,
-                                  elevation: 0,
+                                  shadowColor: Color(0xFFF4F4F4),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(22.0),
+                                  ),
                                 ),
                               ),
                               SizedBox(
@@ -144,7 +150,7 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 label: Padding(
                                   padding:
-                                      EdgeInsets.only(left: screenWidth * 0.10),
+                                      EdgeInsets.only(left: screenWidth * 0.12),
                                   child: Text(
                                     'Log Out',
                                     style: buttonRoboto,
@@ -152,7 +158,10 @@ class ProfilePage extends StatelessWidget {
                                 ),
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.transparent,
-                                  elevation: 0,
+                                  shadowColor: Color(0xFFF4F4F4),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(22.0),
+                                  ),
                                 ),
                               ),
                             ],

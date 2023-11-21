@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 import 'package:metal_marketplace/helper/textFrom.dart';
+import 'package:metal_marketplace/pages/ProfilePage/ProfilePage.dart';
 import 'package:metal_marketplace/pages/ProfilePage/controller/profile_controller.dart';
 
 class EditProfile extends StatelessWidget {
@@ -103,9 +104,9 @@ class EditProfile extends StatelessWidget {
                                                 boxShadow: [
                                                   BoxShadow(
                                                     color: Colors.black
-                                                        .withOpacity(0.7),
-                                                    blurRadius: 8,
-                                                    offset: Offset(0, 3),
+                                                        .withOpacity(0.2),
+                                                    blurRadius: 5,
+                                                    offset: Offset(0, 1),
                                                   ),
                                                 ],
                                               ),
@@ -138,19 +139,19 @@ class EditProfile extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SizedBox(height: 30),
+                      SizedBox(height: 50),
                       myFormEdit(context, Icons.account_box,"Username", false , ctrUsername,profileController.ctrUsername.value),
                       SizedBox(
-                        height: 20,
+                        height: 30,
                       ),
                       myFormEdit(context, Icons.email,"Email", false , ctrEmail,profileController.ctrEmail.value),
                       SizedBox(
-                        height: 20,
+                        height: 70,
                       ),
                       Container(
                         child: ElevatedButton(
                           onPressed: () {
-                            profileController.editprofile(ctrUsername.text.toString(),  ctrEmail.text.toString());
+                            profileController.editProfile(ctrUsername.text.toString(),  ctrEmail.text.toString());
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: primaryColor,
@@ -162,6 +163,28 @@ class EditProfile extends StatelessWidget {
                           ),
                           child: Text(
                             'Change',
+                            style: headerText,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Get.off(ProfilePage());
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.red,
+                            minimumSize:
+                            Size.fromHeight(screenHeight * 0.070),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            'Back',
                             style: headerText,
                           ),
                         ),

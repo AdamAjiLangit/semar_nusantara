@@ -51,14 +51,22 @@ class ProfileController extends GetxController {
     }
   }
 
-  void editprofile(String username,String email) async{
-    ctrUsername.value = username;
-    ctrEmail.value = email;
+  void editProfile(String username, String email) async {
+    if (username.isEmpty || email.isEmpty) {
+      // Show snackbar if data is empty
+      Get.snackbar("Maaf", "Data kosong");
+    } else {
+      // Update the profile information
+      ctrUsername.value = username;
+      ctrEmail.value = email;
 
-    await prefs.setString('username', ctrUsername.value);
-    await prefs.setString('email', ctrEmail.value);
-    Get.snackbar("Congratulation", "Data berhasil dirubah");
-    Get.off(() => ProfilePage());
+      await prefs.setString('username', ctrUsername.value);
+      await prefs.setString('email', ctrEmail.value);
+
+      // Show success snackbar and navigate to the profile page
+      Get.snackbar("Congratulation", "Data berhasil dirubah");
+      Get.off(() => ProfilePage());
+    }
   }
 
   void checkSharedPreference() async {
@@ -71,8 +79,26 @@ class ProfileController extends GetxController {
   }
 
   void logOut() async {
-    await prefs.clear();
-    Get.off(() => LoginPage());
-    // Implement logout logic here
+    Get.defaultDialog(
+      title: "Logout Confirmation",
+      middleText: "Are you sure you want to logout?",
+      actions: [
+        TextButton(
+          onPressed: () {
+            // Cancel button pressed, close the dialog
+            Get.back();
+          },
+          child: Text('Cancel'),
+        ),
+        TextButton(
+          onPressed: () async {
+            // Yes button pressed, log out and navigate to the login page
+            await prefs.clear();
+            Get.off(() => LoginPage());
+          },
+          child: Text('Yes'),
+        ),
+      ],
+    );
   }
 }
