@@ -116,6 +116,7 @@ String setball = "assets/images/collection/ballsetcollection.jpeg";
 String caribea = "assets/images/collection/caribeacollection.png";
 String nikita = "assets/images/collection/nikitawillycollection.jpeg";
 String solitaire = "assets/images/collection/solitairecollection.jpeg";
+String paymentsuccess = "assets/images/icon/paymentsuccses.png";
 String gelangemasbolamrican =
     "assets/images/categories/item/gelang/Gelang_Emas_Bola_Mrican_3_Warna_10K_Semar_Nusantara.jpeg";
 String gelangemasfancylove =

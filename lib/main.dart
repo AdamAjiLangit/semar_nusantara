@@ -6,6 +6,7 @@ import 'package:metal_marketplace/pages/Checkout/CheckoutView.dart';
 import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
 import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
+import 'package:metal_marketplace/pages/PaymentSucsesPage/PaymentSucsesPage.dart';
 import 'package:metal_marketplace/pages/SplashScreen/SplashScreen.dart';
 import 'package:metal_marketplace/routes/app_pages.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
-      home: CatalogPage(),
+      home: HomePage(),
       // home:  const HomeComponentTwo(),
     );
   }
