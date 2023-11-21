@@ -31,9 +31,6 @@ class MyCategory extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0.0,
       flexibleSpace: Column(
         children: [
-          SizedBox(
-            height: 50,
-          ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Obx(

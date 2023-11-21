@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
-      home: HomePage(),
+      home: CatalogPage(),
       // home:  const HomeComponentTwo(),
     );
   }
