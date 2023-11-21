@@ -3,10 +3,7 @@ import 'package:get/get.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  const CustomAppBar({Key? key});
 
   @override
   Widget build(BuildContext context) {
