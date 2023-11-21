@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
 import 'package:metal_marketplace/widget/search.dart';
 import 'package:metal_marketplace/widget/category.dart';
-import 'package:metal_marketplace/pages/HomePage/components/home_component_two.dart';
+import 'package:metal_marketplace/pages/HomePage/components/home_component_three.dart';
 import 'package:metal_marketplace/pages/HomePage/controller/HomePage_Controller.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.only(top: 20.0),
-                child: HomeComponentTwo(),
+                child: HomeComponentThree(),
               ),
             ],
           ),

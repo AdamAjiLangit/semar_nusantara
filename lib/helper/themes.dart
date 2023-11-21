@@ -92,12 +92,11 @@ TextStyle commonRoboto = GoogleFonts.roboto(
         fontSize: figmaFontsize(15)));
 
 TextStyle buttonRoboto = GoogleFonts.roboto(
-  textStyle: TextStyle(
-    fontSize: figmaFontsize(16),
-    fontWeight: FontWeight.w600,
-    color: Color(0xFF1D3A70),
-  )
-);
+    textStyle: TextStyle(
+  fontSize: figmaFontsize(16),
+  fontWeight: FontWeight.w600,
+  color: Color(0xFF1D3A70),
+));
 //IMAGE ASSETS
 String google = "assets/images/logo/google.png";
 String facebook = "assets/images/logo/facebook.png";
@@ -115,15 +114,32 @@ String setball = "assets/images/collection/ballsetcollection.jpeg";
 String caribea = "assets/images/collection/caribeacollection.png";
 String nikita = "assets/images/collection/nikitawillycollection.jpeg";
 String solitaire = "assets/images/collection/solitairecollection.jpeg";
-String gelangemasbolamrican = "assets/images/categories/item/gelang/Gelang_Emas_Bola_Mrican_3_Warna_10K_Semar_Nusantara.jpeg";
-String gelangemasfancylove = "assets/images/categories/item/gelang/Gelang_Emas_Fancy_Love_My_Letter_Bulat_Gold_10K_Semar_Nusantara.jpeg";
-String gelangemashollowniki = "assets/images/categories/item/gelang/Gelang_Emas_Hollow_Niki_Chain_Gold_10K_Semar_Nusantara.jpeg";
-String gelangemasjedar = "assets/images/categories/item/gelang/Gelang_Emas_Jedar_Love_Gold_Double_Layer_10K_Semar_Nusantara.jpeg";
-String gelangemasthesya = "assets/images/categories/item/gelang/Gelang_Emas_Thesya_Butterfly_Hope_Gold_10K_Semar_Nusantara.jpeg";
-String gelangserut = "assets/images/categories/item/gelang/Gelang_Serut_Emas_Mini_Aurel_Gold_10K_Semar_Nusantara.jpeg";
-String kalungemascassano = "assets/images/categories/item/kalung/Kalung_Emas_Cassano_Farasha_Butterfly_Gold_10K_Semar_Nusantara.jpeg";
-String kalungemasgliter = "assets/images/categories/item/kalung/Kalung_Emas_Gliter Bola_Satin_Rose_White_Gold_10K_Semar_usantara.jpeg";
-String kalungemasrhinestone = "assets/images/categories/item/kalung/Kalung_Emas_Round_Rhinestone_Gold_10K_Semar_Nusantara.jpeg";
-String kalungemasstela = "assets/images/categories/item/kalung/Kalung_Emas_Stela_Variasi_Bola_Gliter_Gold_10K_Semar_Nusantara.jpeg";
-String kalungemasdaun = "assets/images/categories/item/kalung/Kalung_Emas_Variasi_Daun_Gold_10K_Semar_Nusantara.jpeg";
-String kalungemasveeline = "assets/images/categories/item/kalung/Kalung_Emas_Veeline_Gold_10K_Semar_Nusantara.jpeg ";
+String gelangemasbolamrican =
+    "assets/images/categories/item/gelang/Gelang_Emas_Bola_Mrican_3_Warna_10K_Semar_Nusantara.jpeg";
+String gelangemasfancylove =
+    "assets/images/categories/item/gelang/Gelang_Emas_Fancy_Love_My_Letter_Bulat_Gold_10K_Semar_Nusantara.jpeg";
+String gelangemashollowniki =
+    "assets/images/categories/item/gelang/Gelang_Emas_Hollow_Niki_Chain_Gold_10K_Semar_Nusantara.jpeg";
+String gelangemasjedar =
+    "assets/images/categories/item/gelang/Gelang_Emas_Jedar_Love_Gold_Double_Layer_10K_Semar_Nusantara.jpeg";
+String gelangemasthesya =
+    "assets/images/categories/item/gelang/Gelang_Emas_Thesya_Butterfly_Hope_Gold_10K_Semar_Nusantara.jpeg";
+String gelangserut =
+    "assets/images/categories/item/gelang/Gelang_Serut_Emas_Mini_Aurel_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemascassano =
+    "assets/images/categories/item/kalung/Kalung_Emas_Cassano_Farasha_Butterfly_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasgliter =
+    "assets/images/categories/item/kalung/Kalung_Emas_Gliter Bola_Satin_Rose_White_Gold_10K_Semar_usantara.jpeg";
+String kalungemasrhinestone =
+    "assets/images/categories/item/kalung/Kalung_Emas_Round_Rhinestone_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasstela =
+    "assets/images/categories/item/kalung/Kalung_Emas_Stela_Variasi_Bola_Gliter_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasdaun =
+    "assets/images/categories/item/kalung/Kalung_Emas_Variasi_Daun_Gold_10K_Semar_Nusantara.jpeg";
+String kalungemasveeline =
+    "assets/images/categories/item/kalung/Kalung_Emas_Veeline_Gold_10K_Semar_Nusantara.jpeg ";
+String iKalung = "assets/images/icon/1.png";
+String iGelang = "assets/images/icon/3.png";
+String iAnting = "assets/images/icon/5.png";
+String iLiontin = "assets/images/icon/2.png";
+String iCincin = "assets/images/icon/4.png";
