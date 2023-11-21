@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/global_component/app_bar.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
+import 'package:metal_marketplace/pages/HomePage/components/home_component_two.dart';
 import 'package:metal_marketplace/widget/search.dart';
 import 'package:metal_marketplace/widget/category.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_three.dart';
@@ -26,19 +27,21 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(
-                height: 10,
-              ),
               HomeComponentOne(),
+              HomeComponentTwo(),
+              SizedBox(height: screenHeight * 0.055,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                     Text('Collection', style: titletext),
                 ],
               ),
-              Container(
-
-                child: HomeComponentThree(),
+              HomeComponentThree(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text('Recommended', style: titletext),
+                ],
               ),
             ],
           ),
