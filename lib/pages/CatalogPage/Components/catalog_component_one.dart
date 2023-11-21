@@ -1,50 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:metal_marketplace/helper/themes.dart';
-import 'package:get/get.dart';
 
 class CatalogComponentOne extends StatelessWidget {
   const CatalogComponentOne({super.key});
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
-    double marginSize = 20.0;
+    final Size mediaQuery = MediaQuery.of(context).size;
+    final double width = mediaQuery.width;
+    final double height = mediaQuery.height;
 
-    return AppBar(
-      backgroundColor: secondaryColor,
-      toolbarHeight: 70,
-      elevation: 1,
-      title: Padding(
-        padding: EdgeInsets.symmetric(horizontal: marginSize),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Image.asset(
-              logo,
-              scale: 5,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed('/cart');
-              },
-              child: Container(
-                width: screenWidth * 0.08,
-                height: screenHeight * 0.08,
-                decoration: const BoxDecoration(
-                  color: primaryColor,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.shopping_cart,
-                  size: 20,
-                  color: secondaryColor,
-                ),
-              ),
-            ),
-          ],
+    return Container(
+      width: double.infinity,
+      height: height * 0.06,
+      margin: EdgeInsets.symmetric(horizontal: width * 0.05, vertical: height * 0.03),
+      padding: EdgeInsets.symmetric(horizontal: width * 0.025),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: Color(0xFFD9D9D9),
+          width: 1,
         ),
+      ),
+      child: Row(
+        children: [
+          Icon(Icons.search, color: primaryColor),
+          SizedBox(width: width * 0.025),
+          Text(
+            "Search...",
+            style: GoogleFonts.poppins(
+                textStyle: const TextStyle(
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12
+                )
+            ),
+          )
+        ],
       ),
     );
   }
+
 }

@@ -8,8 +8,11 @@ class CatalogPageController extends GetxController {
 
   final List<String> categories = [
     'All',
-    'Item',
-    'Collection',
+    'Anting',
+    'Gelang',
+    'Kalung',
+    'Cincin',
+    'Liontin',
   ];
 
   @override
