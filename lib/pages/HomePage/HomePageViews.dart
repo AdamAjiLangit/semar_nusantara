@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:metal_marketplace/global_component/app_bar.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
 import 'package:metal_marketplace/widget/search.dart';
 import 'package:metal_marketplace/widget/category.dart';
@@ -17,43 +18,9 @@ class HomePage extends StatelessWidget {
     double marginSize = 20.0;
 
     return Scaffold(
-      appBar: MySearch(
-        controller: controller.cSearchProduct,
-        onChanged: controller.onSearchProduct,
-        // backgroundColor: secondaryColor,
-        // toolbarHeight: 70,
-        // elevation: 1,
-        // title: Padding(
-        //   padding: EdgeInsets.symmetric(horizontal: marginSize),
-        //   child: Row(
-        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //     children: [
-        //       Image.asset(
-        //         logo,
-        //         scale: 5,
-        //       ),
-        //       InkWell(
-        //         onTap: () {
-        //           Get.toNamed('/cart');
-        //         },
-        //         child: Container(
-        //           width: screenWidth * 0.08,
-        //           height: screenHeight * 0.08,
-        //           decoration: const BoxDecoration(
-        //             color: primaryColor,
-        //             shape: BoxShape.circle,
-        //           ),
-        //           child: const Icon(
-        //             Icons.shopping_cart,
-        //             size: 20,
-        //             color: secondaryColor,
-        //           ),
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
-      ),
+      appBar: PreferredSize(
+          preferredSize: Size.fromHeight(screenHeight * 0.1),
+          child: CustomAppBar()),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: marginSize),
         child: SingleChildScrollView(
@@ -70,7 +37,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               Container(
-                margin: EdgeInsets.only(top: 20.0),
+
                 child: HomeComponentThree(),
               ),
             ],

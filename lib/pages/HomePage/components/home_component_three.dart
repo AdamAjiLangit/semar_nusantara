@@ -15,50 +15,35 @@ class HomeComponentThree extends StatelessWidget {
     final double height = mediaQuery.height;
 
     return Container(
-        padding: EdgeInsets.only(left: 25, right: 25),
-        child: SingleChildScrollView(
-            child: Column(children: [
-          Container(
-            width: 340,
-            margin: EdgeInsets.only(top: 30),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(25),
-              child: CarouselSlider(
-                items: [promote1, promote2, promote3, promote4].map((i) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Container(
-                        width: 340,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          image: DecorationImage(
-                            image: AssetImage(i),
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      );
-                    },
-                  );
-                }).toList(),
-                options: CarouselOptions(
-                  height: 193,
-                  initialPage: 0,
-                  enableInfiniteScroll: true,
-                  autoPlay: true,
-                  autoPlayInterval: Duration(seconds: 3),
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
-                  autoPlayCurve: Curves.fastOutSlowIn,
-                  enlargeFactor: 0.3,
-                  enlargeCenterPage: true,
-                  scrollDirection: Axis.horizontal,
-                ),
-              ),
-            ),
-          )
-        ])));
+        width: width,
+        child: CarouselSlider(
+          items: [promote1, promote2, promote3, promote4].map((i) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    image: DecorationImage(
+                      image: AssetImage(i),
+                      fit: BoxFit.fitWidth,
+                    ),
+                  ),
+                );
+              },
+            );
+          }).toList(),
+          options: CarouselOptions(
+            height: 300,
+            enableInfiniteScroll: true,
+            autoPlay: false,
+            autoPlayInterval: Duration(seconds: 3),
+            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            autoPlayCurve: Curves.fastOutSlowIn,
+            enlargeFactor: 0.3,
+            viewportFraction: 0.5,
+            enlargeCenterPage: true,
+            scrollDirection: Axis.horizontal,
+          ),
+        ));
   }
 }
