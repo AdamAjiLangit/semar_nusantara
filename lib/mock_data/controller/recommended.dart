@@ -17,6 +17,6 @@ class RecommendedController extends GetxController{
     final CincinController cincinController = Get.put(CincinController());
     final LiontinController liontinController = Get.put(LiontinController());
 
-    recommended.addAll([antingController.anting[3], kalungController.kalung[5], gelangController.gelang[3], cincinController.cincin[2], liontinController.liontin[2], gelangController.gelang[5]]);
+    recommended.addAll([antingController.anting[3], kalungController.kalung[5], gelangController.gelang[3], cincinController.cincin[2], liontinController.liontin[2], gelangController.gelang[4]]);
   }
 }
