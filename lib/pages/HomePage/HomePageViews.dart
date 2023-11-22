@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/global_component/app_bar.dart';
+import 'package:metal_marketplace/pages/HomePage/components/home_component_four.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_one.dart';
 import 'package:metal_marketplace/pages/HomePage/components/home_component_two.dart';
 import 'package:metal_marketplace/widget/search.dart';
@@ -43,6 +44,7 @@ class HomePage extends StatelessWidget {
                   Text('Recommended', style: titletext),
                 ],
               ),
+              HomeComponentFour(),
             ],
           ),
         ),
