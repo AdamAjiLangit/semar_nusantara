@@ -30,6 +30,7 @@ Widget CategoriesCircle({
         ),
         SizedBox(height: height * 0.005),
         Text(textValue, style: moneyMiniText),
+
       ],
     ),
   );
