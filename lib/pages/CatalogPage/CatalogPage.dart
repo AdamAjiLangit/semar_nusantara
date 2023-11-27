@@ -6,8 +6,11 @@ import 'package:metal_marketplace/pages/CatalogPage/Components/catalog_component
 import 'package:metal_marketplace/pages/CatalogPage/Contoller/CatalogPage_Controller.dart';
 import 'package:metal_marketplace/widget/category.dart';
 
+import '../HomePage/controller/HomePage_Controller.dart';
+
 class CatalogPage extends StatelessWidget {
   final CatalogPageController controller = Get.put(CatalogPageController());
+  final HomePageController homePageController = Get.put(HomePageController());
 
   @override
   Widget build(BuildContext context) {
