@@ -45,6 +45,9 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               HomeComponentFour(),
+              SizedBox(
+                height: 50,
+              ),
             ],
           ),
         ),

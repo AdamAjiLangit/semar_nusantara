@@ -20,6 +20,7 @@ class CatalogComponentTwo extends StatelessWidget {
   final AllCategoryController allCategoryController =
       Get.put(AllCategoryController());
 
+
   @override
   Widget build(BuildContext context) {
     final Size mediaQuery = Get.mediaQuery.size;

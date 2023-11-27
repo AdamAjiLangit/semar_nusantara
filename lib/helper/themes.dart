@@ -139,6 +139,33 @@ String kalungemasdaun =
     "assets/images/categories/item/kalungEmasVariasiDaunGold10KSemarNusantara.png";
 String kalungemasveeline =
     "assets/images/categories/item/kalungEmasVeeline.png";
+String antingkorea =
+    "assets/images/categories/item/antingEmasKorea.png";
+String antinglaluna =
+    "assets/images/categories/item/antingEmasLaLuna.png";
+String antingleta =
+    "assets/images/categories/item/antingEmasListLeta.png";
+String antingpositano =
+    "assets/images/categories/item/antingEmasPositano.png";
+
+String cincincheryl =
+    "assets/images/categories/item/cincinEmasCheryl.png";
+String cincinkorea =
+    "assets/images/categories/item/cincinEmasKorea.png";
+String cincinmoona =
+    "assets/images/categories/item/cincinEmasMoona.png";
+String cincinpositano =
+    "assets/images/categories/item/cincinEmasPositano.png";
+
+String liontinamalfi =
+    "assets/images/categories/item/liontinEmasAmalfiCoastStarMotherOfPearlPendant17KSemarNusantara.png";
+String liontinclassic =
+    "assets/images/categories/item/liontinEmasClassicSolitaireGold17KSemarNusantara.png";
+String liontinbusan =
+    "assets/images/categories/item/liontinEmasKoreaSpringinBusanPendantCollection17KInYourSeoul.png";
+String liontinmutiara =
+    "assets/images/categories/item/liontinMutiaraEmasTheCaribbeaAtlantisSeriesWavePendant.png";
+
 String iKalung = "assets/images/icon/1.png";
 String iGelang = "assets/images/icon/3.png";
 String iAnting = "assets/images/icon/5.png";

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:metal_marketplace/helper/themes.dart';
 import 'package:metal_marketplace/mock_data/model/product.dart';
 
 class AntingController extends GetxController {
@@ -7,6 +8,7 @@ class AntingController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+
     Product anting1 = Product(
         "gelang-1",
         "Antin_Emas_Korea_Autumn_Leaves_Collection_Gold_17K_In_Your_Seoul",

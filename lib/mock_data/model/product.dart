@@ -5,6 +5,7 @@ class Product {
   late String image;
   late String name;
   late double price;
+  late String categories;
   RxInt quantity = 0.obs;
 
   Product(String id, String image, String name, double price, {int quantity = 0}){
