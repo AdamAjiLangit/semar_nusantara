@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 import 'package:metal_marketplace/pages/CartPage/CartView.dart';
@@ -16,6 +17,7 @@ Widget cardProduct({required context, required controller}) {
   final double height = mediaQuery.height;
 
   return Obx(() => Container(
+
     height: height * 0.34,
     margin: EdgeInsets.only(left: width * 0.05),
     child: ListView.builder(
@@ -34,6 +36,7 @@ Widget cardProduct({required context, required controller}) {
               width: width * 0.37,
               margin:
               EdgeInsets.only(right: width * 0.035, bottom: height * 0),
+
               decoration: BoxDecoration(
                 color: secondaryColor,
                 borderRadius: BorderRadius.circular(10),
@@ -45,7 +48,6 @@ Widget cardProduct({required context, required controller}) {
                     spreadRadius: 0,
                   )
                 ],
-
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,12 +58,15 @@ Widget cardProduct({required context, required controller}) {
                       Container(
                         padding:
                         EdgeInsets.symmetric(horizontal: width * 0.03),
+
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
+
                               height: width * 0.055,
+
                               child: Align(
                                 alignment: Alignment.bottomLeft,
                                 child: Text(product.name,
@@ -70,6 +75,8 @@ Widget cardProduct({required context, required controller}) {
                                     maxLines: 2),
                               ),
                             ),
+
+                            SizedBox(height: height * 0.005),
                             Text(formattedPrice, style: moneyMiniText),
                           ],
                         ),
@@ -77,6 +84,7 @@ Widget cardProduct({required context, required controller}) {
                     ],
                   ),
                   Container(
+
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(
                       horizontal: width * 0.005,
