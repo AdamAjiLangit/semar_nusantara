@@ -6,6 +6,7 @@ import '../../helper/themes.dart';
 class CheckoutPage extends StatelessWidget {
   const CheckoutPage({Key? key}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -120,7 +121,7 @@ class CheckoutPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(7),
                     ),
                     child: Image.asset(
-                      ball, // Ganti dengan path asset gambar
+                      promote1, // Ganti dengan path asset gambar
                       width: 80, // Sesuaikan dengan lebar yang diinginkan
                       height: 80,
                       fit: BoxFit.cover,

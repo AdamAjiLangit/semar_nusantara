@@ -96,7 +96,6 @@ Widget cardProduct({required context, required controller}) {
                           onTap: () {
                             // Get.toNamed('/cart');
                             cartController.addToCart(product);
-                            Get.to(CartPage());
                           },
                           child: Container(
                             width: width * 0.1,

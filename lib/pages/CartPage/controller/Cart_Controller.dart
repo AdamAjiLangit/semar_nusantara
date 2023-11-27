@@ -21,13 +21,17 @@ class CartPageController extends GetxController {
 
   void addToCart(Product product) {
     selectedProducts.add(product);
+
+    // Show a snackbar
+    Get.snackbar(
+      'Item Added',
+      '${product.name} has been added to your cart',
+      snackPosition: SnackPosition.TOP,
+      duration: Duration(seconds: 3),
+      // You can customize the appearance of the snackbar further if needed
+    );
   }
-  // void addToCart(Product product) {
-  //   final existingItemIndex = selectedProducts.indexWhere((ProductList) => ProductList.id == product.id);
-  //   selectedProducts.add(product);
-  //   selectedProducts.refresh();
-  //   Get.to(CartPage());
-  // }
+
 
 
   void checkIsProductEmpty() {
@@ -39,7 +43,7 @@ class CartPageController extends GetxController {
       Get.snackbar(
         'Error',
         'No products selected. Please add products to your cart.',
-        snackPosition: SnackPosition.BOTTOM,
+        snackPosition: SnackPosition.TOP,
         duration: Duration(seconds: 3),
       );
     } else {
@@ -65,6 +69,15 @@ class CartPageController extends GetxController {
   void removeFromSelectedProducts(Product product) {
     selectedProducts.remove(product);
     selectedProducts.refresh();
+
+    // Show a snackbar
+    Get.snackbar(
+      'Item Removed',
+      '${product.name} has been removed from your cart',
+      snackPosition: SnackPosition.TOP,
+      duration: Duration(seconds: 3),
+      // You can customize the appearance of the snackbar further if needed
+    );
   }
 
   bool isProductSelected(Product product) {
