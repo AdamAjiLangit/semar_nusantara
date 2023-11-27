@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:metal_marketplace/helper/themes.dart';
+import 'package:metal_marketplace/pages/CartPage/CartView.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key});
@@ -28,7 +29,8 @@ class CustomAppBar extends StatelessWidget {
             /// Icon Cart
             InkWell(
               onTap: () {
-                Get.toNamed('/cart');
+                // Get.toNamed('/cart');
+                Get.to(CartPage());
               },
               child: Container(
                 width: width * 0.1,

@@ -5,6 +5,7 @@ import 'package:metal_marketplace/mock_data/controller/gelang.dart';
 import 'package:metal_marketplace/mock_data/controller/kalung.dart';
 import 'package:metal_marketplace/mock_data/controller/liontin.dart';
 import 'package:metal_marketplace/mock_data/model/product.dart';
+import 'package:metal_marketplace/pages/CartPage/controller/Cart_Controller.dart';
 
 class RecommendedController extends GetxController{
   RxList<Product> recommended = <Product>[].obs;
@@ -18,5 +19,10 @@ class RecommendedController extends GetxController{
     final LiontinController liontinController = Get.put(LiontinController());
 
     recommended.addAll([antingController.anting[3], kalungController.kalung[5], gelangController.gelang[3], cincinController.cincin[2], liontinController.liontin[2], gelangController.gelang[4]]);
+  }
+  void addToCart(Product product) {
+    CartPageController cartController = Get.find<CartPageController>();
+    cartController.addToCart(product);
+    // You can add additional logic here, like showing a confirmation message
   }
 }

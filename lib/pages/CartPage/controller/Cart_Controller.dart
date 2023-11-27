@@ -1,20 +1,62 @@
 import 'package:get/get.dart';
 import 'package:metal_marketplace/mock_data/controller/all_menu.dart';
+import 'package:metal_marketplace/mock_data/model/cart.dart';
 import 'package:metal_marketplace/mock_data/model/product.dart';
 import 'package:intl/intl.dart';
+import 'package:metal_marketplace/pages/CartPage/CartView.dart';
+import 'package:metal_marketplace/pages/Checkout/CheckoutView.dart';
 
 class CartPageController extends GetxController {
   final AllCategoryController allCategoryController = Get.put(AllCategoryController());
   RxList<Product> selectedProducts = <Product>[].obs;
   RxDouble subTotalPrice = 0.0.obs;
+  RxList<Product> cart = <Product>[].obs;
   RxDouble totalPrice = 0.0.obs;
   RxString formattedSubTotalPrice = ''.obs;
   RxString formattedTotalPrice = ''.obs;
   RxBool isSelectedProductEmpty = false.obs;
+  RxInt quantity = 1.obs;
+
+
+
+  void addToCart(Product product) {
+    selectedProducts.add(product);
+  }
+  // void addToCart(Product product) {
+  //   final existingItemIndex = selectedProducts.indexWhere((ProductList) => ProductList.id == product.id);
+  //   selectedProducts.add(product);
+  //   selectedProducts.refresh();
+  //   Get.to(CartPage());
+  // }
+
 
   void checkIsProductEmpty() {
     isSelectedProductEmpty.value = selectedProducts.isEmpty;
+
+    if (isSelectedProductEmpty.value) {
+      // Perform actions when there are no selected products
+      // For example, show an error message
+      Get.snackbar(
+        'Error',
+        'No products selected. Please add products to your cart.',
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: 3),
+      );
+    } else {
+      Get.to(CheckoutPage());
+    }
   }
+
+  void checkIsCartEmpty() {
+    if (cart.isEmpty) {
+      // Cart is empty, perform actions accordingly
+      print('Cart is empty');
+    } else {
+      // Cart is not empty, perform other actions
+
+    }
+  }
+
 
   void addToSelectedProducts(Product product) {
     selectedProducts.add(product);
@@ -22,6 +64,7 @@ class CartPageController extends GetxController {
 
   void removeFromSelectedProducts(Product product) {
     selectedProducts.remove(product);
+    selectedProducts.refresh();
   }
 
   bool isProductSelected(Product product) {
