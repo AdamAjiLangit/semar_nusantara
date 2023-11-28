@@ -43,7 +43,7 @@ Widget ContainerTotal({required context, required String textValue, required Str
           ),
           ElevatedButton(
             onPressed: () {
-              isOffNamed ? Get.offAllNamed(route) : Get.toNamed(route);
+
             },
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(
