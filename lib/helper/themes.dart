@@ -6,6 +6,7 @@ const Color primaryColor = Color.fromRGBO(123, 46, 66, 1);
 const Color secondaryColor = Color.fromRGBO(255, 255, 255, 1);
 const Color primaryTextColor = Colors.black;
 const Color greyFix = Color(0xFF9FADBC);
+const Color greyColor = Color(0xFF777777);
 const Color greyWhite = Color(0xFFEFEFEF);
 const Color lineColor = Color.fromRGBO(232, 232, 232, 100);
 const Color offButtonColor = Color.fromRGBO(203, 203, 203, 1);
@@ -24,6 +25,78 @@ TextStyle buttonStyle({required final color}) {
           fontWeight: FontWeight.w900,
           fontSize: figmaFontsize(24)));
 }
+
+TextStyle ts20MediumBlack = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w500,
+        fontSize: 20
+    )
+);
+
+TextStyle ts16SemiboldWhite = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: secondaryColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 16
+    )
+);
+
+TextStyle ts16SemiboldBlack = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 16
+    )
+);
+
+TextStyle ts14MediumGrey = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: greyColor,
+        fontWeight: FontWeight.w500,
+        fontSize: 14
+    )
+);
+
+TextStyle ts12SemiboldGrey = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: greyColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 12
+    )
+);
+
+TextStyle ts12SemiboldBlack = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 12
+    )
+);
+
+TextStyle ts12MediumBlack = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w500,
+        fontSize: 12
+    )
+);
+
+TextStyle ts20SemiboldBlack = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 20
+    )
+);
+
+TextStyle ts18SemiboldBlack = GoogleFonts.poppins(
+    textStyle: const TextStyle(
+        color: primaryTextColor,
+        fontWeight: FontWeight.w600,
+        fontSize: 18
+    )
+);
 
 TextStyle titletext = GoogleFonts.roboto(
     textStyle: TextStyle(
