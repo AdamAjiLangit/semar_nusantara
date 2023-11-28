@@ -32,23 +32,8 @@ class CartPageController extends GetxController {
     );
   }
 
-
-
   void checkIsProductEmpty() {
     isSelectedProductEmpty.value = selectedProducts.isEmpty;
-
-    if (isSelectedProductEmpty.value) {
-      // Perform actions when there are no selected products
-      // For example, show an error message
-      Get.snackbar(
-        'Error',
-        'No products selected. Please add products to your cart.',
-        snackPosition: SnackPosition.TOP,
-        duration: Duration(seconds: 3),
-      );
-    } else {
-      Get.to(CheckoutPage());
-    }
   }
 
   void checkIsCartEmpty() {
@@ -60,7 +45,6 @@ class CartPageController extends GetxController {
 
     }
   }
-
 
   void addToSelectedProducts(Product product) {
     selectedProducts.add(product);
@@ -117,6 +101,8 @@ class CartPageController extends GetxController {
     totalPrice.value = subTotalPrice.value + ongkir;
     formattedTotalPrice.value = formatPrice(totalPrice.value);
   }
+
+
 
   void clearSelectedProducts() {
     selectedProducts.clear();
