@@ -14,10 +14,10 @@ class SplashController extends GetxController {
     checkSharedPreference();
   }
 
-  void checkSharedPreference() async {
+   Future checkSharedPreference() async {
     print("Checking SharedPreferences...");
     prefs = await SharedPreferences.getInstance();
-    Future.delayed(Duration(seconds: 3), () async {
+    Future.delayed(Duration(seconds: 5), () async {
       if (prefs.getString('token') == null) {
         print("Token is null. Navigating to login...");
         Get.offAllNamed('signup');

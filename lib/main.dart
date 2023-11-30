@@ -29,6 +29,8 @@ class MyApp extends StatelessWidget {
       // getPages: AppPages.routes,
       home: SplashScreen(),
       // home:  const HomeComponentTwo(),
+      initialRoute: AppPages.INITIAL,
+      getPages: AppPages.routes,
     );
   }
 }
