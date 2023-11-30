@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../helper/themes.dart';
 import '../pages/CartPage/controller/Cart_Controller.dart';
+import '../pages/PaymentSucsesPage/PaymentSucsesPage.dart';
 
 Widget ContainerTotal({required context, required String textValue, required String route, required bool isOffNamed}) {
   final CartPageController cartController = Get.put(CartPageController());
@@ -43,7 +44,7 @@ Widget ContainerTotal({required context, required String textValue, required Str
           ),
           ElevatedButton(
             onPressed: () {
-
+              Get.to(PaymentSucsesPage());
             },
             style: ElevatedButton.styleFrom(
               padding: EdgeInsets.symmetric(

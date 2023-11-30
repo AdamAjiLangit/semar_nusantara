@@ -29,7 +29,7 @@ class CartComponentOne extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Delivery Address', style: ts12SemiboldGrey),
-                  Text('SMK Raden Umar Said', style: ts20SemiboldBlack,)
+                  Text('Home', style: ts20SemiboldBlack,)
                 ],
               ),
               Container(

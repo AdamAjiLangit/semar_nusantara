@@ -35,7 +35,7 @@ Widget cardProduct({required context, required controller}) {
           return Container(
               width: width * 0.37,
               margin:
-              EdgeInsets.only(right: width * 0.035, bottom: height * 0),
+              EdgeInsets.only(right: width * 0.025, bottom: height * 0),
 
               decoration: BoxDecoration(
                 color: secondaryColor,
@@ -84,36 +84,27 @@ Widget cardProduct({required context, required controller}) {
                     ],
                   ),
                   Container(
-
+                    height: height * 0.04,
                     width: double.infinity,
                     margin: EdgeInsets.symmetric(
-                      horizontal: width * 0.005,
-                      vertical: height * 0.0020,
+                      horizontal: width * 0.015,
+                      vertical: height * 0.01,
                     ),
-                    child: Column(
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            // Get.toNamed('/cart');
-                            cartController.addToCart(product);
-                          },
-                          child: Container(
-                            width: width * 0.1,
-                            height: width * 0.1,
-                            decoration: const BoxDecoration(
-                              color: primaryColor,
-                              shape: BoxShape.circle,
-                            ),
-                            child: const Icon(
-                              Icons.shopping_cart,
-                              color: secondaryColor,
-                            ),
-                          ),
-                        )
-                      ],
+                    child: ElevatedButton(
+                      onPressed: () {
+                        cartController.addToSelectedProducts(product);
+                        cartController.incrementProductQuantity(product);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: primaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      child: Icon(Icons.shopping_cart,
+                          size: 20, color: secondaryColor),
                     ),
                   ),
-
                 ],
               ));
         });
