@@ -1,11 +1,12 @@
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:metal_marketplace/global_component/Navigation_Menu.dart';
 import 'package:metal_marketplace/routes/app_pages.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class LoginController extends GetxController {
   late final SharedPreferences prefs;
@@ -14,6 +15,8 @@ class LoginController extends GetxController {
   RxBool passwordObscure = true.obs;
   RxBool isLoading = false.obs;
   RxBool isSuccess = false.obs;
+  RxBool isGoogleSignIn = false.obs;  
+  RxBool isUsernameGoogleSignIn = false.obs; 
 
   @override
   void onInit() {
@@ -81,4 +84,27 @@ class LoginController extends GetxController {
       print("HTTP request failed with status code: ${response.statusCode}");
     }
   }
+
+   Future<void> signInWithGoogle() async {
+    try {
+      isGoogleSignIn.value = true;
+      isUsernameGoogleSignIn.value = true;
+      GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      GoogleSignInAuthentication googleAuth = await googleUser!.authentication;
+      AuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+      await FirebaseAuth.instance.signInWithCredential(credential);
+      Get.offAll(NavigationMenu());
+      isGoogleSignIn.value = false;
+    } catch (e) {
+      isGoogleSignIn.value = false;
+      isUsernameGoogleSignIn.value = false;
+      print('Google Sign-In error: $e');
+      Get.snackbar("Error", "Google Sign-In error: $e");
+      isGoogleSignIn.value = true;
+    }
+  }
+
 }

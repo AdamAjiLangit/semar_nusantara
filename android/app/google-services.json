@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "58778118632",
+    "project_id": "flutter-firebase-e-commerce",
+    "storage_bucket": "flutter-firebase-e-commerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58778118632:android:976dd7e2d983af41b85c5d",
+        "android_client_info": {
+          "package_name": "com.example.metal_marketplace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58778118632-iuk4a3hva2d1jfcc9iha5pq7kseusjpg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.metal_marketplace",
+            "certificate_hash": "49da22093dc3024937f6688f52787813bb1ad4e6"
+          }
+        },
+        {
+          "client_id": "58778118632-hl111vuaojmjraqcl8336i6v7mkcbkl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwcIMn7fIOZGynMMuYsOL_CUtiVqwV1H4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58778118632-hl111vuaojmjraqcl8336i6v7mkcbkl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

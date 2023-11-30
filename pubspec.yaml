@@ -48,6 +48,8 @@ dependencies:
   convex_bottom_bar:
   intl: ^0.18.1
   auto_size_text: ^3.0.0
+  firebase_auth: ^4.15.0
+  google_sign_in: ^6.1.6
 
 dev_dependencies:
   flutter_test:

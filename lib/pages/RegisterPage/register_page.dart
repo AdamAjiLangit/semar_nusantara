@@ -1,11 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'package:metal_marketplace/pages/RegisterPage/controller/register_controller.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 import 'package:metal_marketplace/helper/textFrom.dart';
-import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
+
 
 class RegisterPage extends StatelessWidget {
   RegisterPage({Key? key}) : super(key: key);
@@ -159,7 +158,7 @@ class RegisterPage extends StatelessWidget {
                                   children: [
                                     GestureDetector(
                                       onTap: () {
-                                        print('Google icon clicked');
+                                        controller.signInWithGoogle();
                                       },
                                       child: Image.asset(
                                         google,
@@ -200,7 +199,7 @@ class RegisterPage extends StatelessWidget {
                                           ),
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
-                                              Get.toNamed('login');
+                                              Get.toNamed('/login');
                                             },
                                         ),
                                       ],

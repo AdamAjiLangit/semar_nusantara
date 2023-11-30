@@ -110,7 +110,7 @@ TextStyle appBarText = GoogleFonts.poppins(
         fontWeight: FontWeight.w500,
         fontSize: figmaFontsize(14)));
 
-TextStyle moneyText = GoogleFonts.elMessiri(
+TextStyle moneyText = GoogleFonts.poppins(
     textStyle: TextStyle(
         color: primaryTextColor,
         fontWeight: FontWeight.w600,
@@ -139,7 +139,7 @@ TextStyle headerTextblack = GoogleFonts.poppins(
         fontWeight: FontWeight.w600,
         fontSize: figmaFontsize(18)));
 
-TextStyle headerelMessiri = GoogleFonts.elMessiri(
+TextStyle headerelMessiri = GoogleFonts.poppins(
     textStyle: TextStyle(
         color: primaryTextColor,
         fontWeight: FontWeight.w600,
