@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:metal_marketplace/global_component/Navigation_Menu.dart';
 import 'package:metal_marketplace/pages/HomePage/HomePageViews.dart';
 import 'package:metal_marketplace/pages/LandingPage/pages/LandingPage.dart';
 import 'package:metal_marketplace/pages/LoginPage/LoginPage.dart';
@@ -20,10 +21,10 @@ class SplashController extends GetxController {
     Future.delayed(Duration(seconds: 5), () async {
       if (prefs.getString('token') == null) {
         print("Token is null. Navigating to login...");
-        Get.offAllNamed('signup');
+        Get.offAllNamed('login');
       } else {
         print("Token found. Navigating to home...");
-        Get.offAllNamed('login');
+        Get.offAll(NavigationMenu());
       }
     });
   }

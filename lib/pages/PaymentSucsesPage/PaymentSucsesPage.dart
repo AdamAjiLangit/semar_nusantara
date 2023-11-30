@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:metal_marketplace/global_component/Navigation_Menu.dart';
 import 'package:metal_marketplace/helper/themes.dart';
 
 import '../../routes/app_pages.dart';
@@ -76,7 +77,7 @@ class PaymentSucsesPage extends StatelessWidget {
             SizedBox(height: 100.0),
             ElevatedButton(
               onPressed: () {
-                Get.offAllNamed(Routes.HOME_PAGE);
+                Get.off(NavigationMenu());
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: primaryColor,
