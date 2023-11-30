@@ -188,11 +188,11 @@ class RegisterPage extends StatelessWidget {
                                     text: TextSpan(
                                       children: <TextSpan>[
                                         TextSpan(
-                                          text: "already have an account? ",
+                                          text: "Already have an account? ",
                                           style: appBarText,
                                         ),
                                         TextSpan(
-                                          text: "Click here",
+                                          text: "Login",
                                           style: TextStyle(
                                             color: primaryColor,
                                             decoration:
@@ -200,7 +200,7 @@ class RegisterPage extends StatelessWidget {
                                           ),
                                           recognizer: TapGestureRecognizer()
                                             ..onTap = () {
-                                              Get.to(LoginPage());
+                                              Get.toNamed('login');
                                             },
                                         ),
                                       ],

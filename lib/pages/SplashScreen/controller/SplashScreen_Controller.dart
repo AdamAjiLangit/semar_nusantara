@@ -20,10 +20,10 @@ class SplashController extends GetxController {
     Future.delayed(Duration(seconds: 3), () async {
       if (prefs.getString('token') == null) {
         print("Token is null. Navigating to login...");
-        Get.offAll(HomePage());
+        Get.offAllNamed('signup');
       } else {
         print("Token found. Navigating to home...");
-        Get.offAll(HomePage());
+        Get.offAllNamed('login');
       }
     });
   }
