@@ -132,7 +132,7 @@ class LoginPage extends StatelessWidget {
                                     children: [
                                       GestureDetector(
                                         onTap: () {
-                                          print('Google icon clicked');
+                                          controller.signInWithGoogle();
                                         },
                                         child: Image.asset(
                                           google,
@@ -161,11 +161,11 @@ class LoginPage extends StatelessWidget {
                                       text: TextSpan(
                                         children: <TextSpan>[
                                           TextSpan(
-                                            text: "didn’t have an account? ",
+                                            text: "Didn’t have an account? ",
                                             style: appBarText,
                                           ),
                                           TextSpan(
-                                            text: "Click here",
+                                            text: "Create Account",
                                             style: TextStyle(
                                               color: primaryColor,
                                               decoration:
