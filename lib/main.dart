@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: AppPages.INITIAL,
       // getPages: AppPages.routes,
-      home: NavigationMenu(),
+      home: SplashScreen(),
       // home:  const HomeComponentTwo(),
     );
   }

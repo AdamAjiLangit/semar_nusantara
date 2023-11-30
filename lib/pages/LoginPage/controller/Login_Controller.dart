@@ -62,7 +62,7 @@ class LoginController extends GetxController {
             "Success",
             "$message",
           );
-          Get.offAllNamed(Routes.HOME_PAGE);
+          Get.offAllNamed('/homepage');
           isLoading.value = false;
 
         } else if (status == false) {

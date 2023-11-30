@@ -56,7 +56,7 @@ class RegisterController extends GetxController {
         if (status == true) {
           final message = getData["message"];
           print("Token : $message");
-          Get.off(HomePage());
+          Get.offAllNamed('/homepage');
           isSuccess.value = true;
           Get.snackbar(
             "Success",
